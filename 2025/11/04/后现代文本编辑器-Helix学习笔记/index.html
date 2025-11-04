@@ -1,0 +1,983 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Notvalid0的个人博客站" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Notvalid0的个人博客站" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Notvalid0的个人博客站" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="学习笔记,Helix" />
+
+
+<link rel="canonical" href="http://example.com/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+
+  <title>
+后现代文本编辑器-Helix学习笔记 |
+NotValid0's BLOG = Notvalid0的个人博客站</title>
+<meta name="generator" content="Hexo 8.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">后现代文本编辑器-Helix学习笔记
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2025-11-04 08:06:54">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2025-11-04T08:06:54+08:00">2025-11-04</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">NotValid0's BLOG</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/cover.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="环四亚甲基四硝基胺">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Notvalid0的个人博客站">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>欢迎使用 Helix 编辑器！</p>
+<p>Helix 不同于你可能习惯的其他编辑器，因为它是<strong>模式化</strong>的，这意味着它有不同的模式来编辑文本。</p>
+<p>你将主要使用的模式是<strong>普通模式</strong>和<strong>插入模式</strong>。在普通模式下，你按下的键不会实际输入文本，而是执行各种文本操作。这使得编辑更加高效。</p>
+<p>本教程将教你如何使用 Helix 的模式化编辑功能。开始前，请确保没有按下 <code>CapsLock</code> 键，并按住 <code>j</code> 键直到到达第一课。</p>
+<h2 id="1-1-基本光标移动"><a href="#1-1-基本光标移动" class="headerlink" title="1.1 基本光标移动"></a>1.1 基本光标移动</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    ↑</span><br><span class="line">    k       * h 在左</span><br><span class="line">← h   l →   * l 在右</span><br><span class="line">    j       * j 像一个向下的箭头</span><br><span class="line">    ↓</span><br></pre></td></tr></table></figure>
+
+<p>你可以使用 <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> 键来移动光标，如上图所示。光标&#x2F;箭头键也可以工作，但使用 <code>hjkl</code> 键更快，因为它们离你将要使用的其他键更近。</p>
+<p>尝试移动以熟悉 <code>hjkl</code>。准备好后，按住 <code>j</code> 继续下一课。</p>
+<h2 id="1-2-退出-Helix"><a href="#1-2-退出-Helix" class="headerlink" title="1.2 退出 Helix"></a>1.2 退出 Helix</h2><ol>
+<li>输入 <code>:</code> 进入命令模式。光标会移动到屏幕底部。</li>
+<li>输入 <code>q</code> 或 <code>quit</code> 然后按 <code>Enter</code> 退出 Helix。</li>
+</ol>
+<p>注意：如果有未保存的更改，<code>quit</code> 命令将失败。要强制退出并放弃这些更改，输入 <code>q!</code> 或 <code>quit!</code>。你将稍后学习如何保存文件。</p>
+<p>要退出命令模式而不输入命令，请按 <code>Escape</code>。</p>
+<h2 id="1-3-删除字符"><a href="#1-3-删除字符" class="headerlink" title="1.3 删除字符"></a>1.3 删除字符</h2><p>输入 <code>d</code> 键删除光标下的字符。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>将光标移动到每个多余的字符上，并输入 <code>d</code> 删除它。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Thhiss senttencee haass exxtra charracterss.</span><br><span class="line">    This sentence has extra characters.</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4-插入模式"><a href="#1-4-插入模式" class="headerlink" title="1.4 插入模式"></a>1.4 插入模式</h2><p>输入 <code>i</code> 键进入插入模式。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>移动到行中缺少文本的地方，输入 <code>i</code> 进入插入模式。你输入的键现在会输入文本。</li>
+<li>输入缺少的文本。</li>
+<li>按 <code>Escape</code> 退出插入模式并返回普通模式。</li>
+<li>重复直到该行与下面的行匹配。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Th stce misg so.</span><br><span class="line">    This sentence is missing some text.</span><br></pre></td></tr></table></figure>
+
+<p>注意：状态栏会显示你当前的模式。注意当你输入 <code>i</code> 时，<code>NOR</code> 变为 <code>INS</code>。</p>
+<h2 id="1-5-保存文件"><a href="#1-5-保存文件" class="headerlink" title="1.5 保存文件"></a>1.5 保存文件</h2><p>输入 <code>:w</code> 或 <code>:write</code> 保存文件。</p>
+<ol>
+<li>使用 <code>:q!</code> 退出 Helix，如前所述，或打开一个新终端。</li>
+<li>通过运行 <code>hx FILENAME</code> 在 Helix 中打开一个文件。</li>
+<li>对文件进行一些编辑。</li>
+<li>输入 <code>:</code> 进入命令模式。</li>
+<li>输入 <code>w</code> 或 <code>write</code>，然后按 <code>Enter</code> 保存文件。</li>
+</ol>
+<p>你也可以输入 <code>wq</code> 或 <code>write-quit</code> 来保存并退出。</p>
+<p>注意：你可以在 <code>w</code> &#x2F; <code>write</code> 命令后选择性地输入文件路径，以保存到该路径。<br>注意：如果文件有未保存的更改，文件名旁边会出现一个加号 <code>[+]</code>。</p>
+<h2 id="第1章总结"><a href="#第1章总结" class="headerlink" title="第1章总结"></a>第1章总结</h2><ul>
+<li>使用 <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> 键移动光标。</li>
+<li>输入 <code>:</code> 进入命令模式。<ul>
+<li><code>q</code> &#x2F; <code>quit</code> 和 <code>q!</code> &#x2F; <code>quit!</code> 命令将退出 Helix。前者在有未保存的更改时失败。后者放弃这些更改。</li>
+<li><code>w</code> &#x2F; <code>write</code> 命令将保存文件。</li>
+<li><code>wq</code> &#x2F; <code>write-quit</code> 命令将同时保存并退出。</li>
+</ul>
+</li>
+<li>输入 <code>d</code> 删除光标处的字符。</li>
+<li>输入 <code>i</code> 进入插入模式并输入文本。按 <code>Escape</code> 返回普通模式。</li>
+</ul>
+<h2 id="2-1-更多插入命令"><a href="#2-1-更多插入命令" class="headerlink" title="2.1 更多插入命令"></a>2.1 更多插入命令</h2><p>如你所见，你可以输入 <code>i</code> 在光标当前位置进入插入模式。还有一些其他方法可以在不同位置进入插入模式。</p>
+<p>常见的插入命令包括：</p>
+<ul>
+<li><code>i</code> - 在选择之前插入。</li>
+<li><code>a</code> - 在选择之后插入。（<code>a</code> 表示“追加”）</li>
+<li><code>I</code> - 在行首插入。</li>
+<li><code>A</code> - 在行尾插入。</li>
+</ul>
+<ol>
+<li>移动到下面标记为 <code>--&gt;</code> 的行的任何地方。</li>
+<li>输入 <code>A</code>（Shift-a），光标将移动到行尾，你可以开始输入。</li>
+<li>输入必要的文本，使其匹配下面的行。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; This sentence is miss</span><br><span class="line">    This sentence is missing some text.</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-打开新行"><a href="#2-2-打开新行" class="headerlink" title="2.2 打开新行"></a>2.2 打开新行</h2><p>输入 <code>o</code> 在光标下方添加一个新行并插入。<br>输入 <code>O</code> 在光标上方添加一个新行并插入。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>输入 <code>o</code> 打开一个新行并输入你的答案。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; What is the best editor?</span><br></pre></td></tr></table></figure>
+
+<h2 id="第2章总结"><a href="#第2章总结" class="headerlink" title="第2章总结"></a>第2章总结</h2><ul>
+<li>输入 <code>a</code> 在选择之后追加。</li>
+<li>输入 <code>I</code> 在行首的第一个非空字符处进入插入模式。</li>
+<li>输入 <code>A</code> 在行尾进入插入模式。</li>
+<li>使用 <code>o</code> 和 <code>O</code> 分别在光标下方和上方打开新行。</li>
+</ul>
+<h2 id="3-1-移动和选择"><a href="#3-1-移动和选择" class="headerlink" title="3.1 移动和选择"></a>3.1 移动和选择</h2><p>输入 <code>w</code> 向前选择到下一个单词。</p>
+<p><code>d</code> 键实际上不会删除光标处的字符，它会删除所有选择的文本。你的光标就像一个单字符选择。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>移动到需要删除的单词开头。</li>
+<li>输入 <code>w</code> 选择到下一个单词的开头。</li>
+<li>输入 <code>d</code> 删除选择。</li>
+<li>重复删除行中的所有多余单词。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; This sentence pencil has vacuum extra words in the it.</span><br><span class="line">    This sentence has extra words in it.</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-2-更多移动"><a href="#3-2-更多移动" class="headerlink" title="3.2 更多移动"></a>3.2 更多移动</h2><p>如你所见，输入 <code>w</code> 将光标向前移动到下一个单词的开头，选择穿过的文本。这对于移动文本和选择要操作的文本很有用。</p>
+<p>常见的移动命令包括：</p>
+<ul>
+<li><code>w</code> - 向前移动到下一个单词的开头。</li>
+<li><code>e</code> - 向前移动到当前单词的结尾。</li>
+<li><code>b</code> - 向后移动到当前单词的开头。</li>
+</ul>
+<p>要选择光标下的单词，请结合使用 <code>e</code> 和 <code>b</code>。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>移动到一个 <code>d</code> 字母。</li>
+<li>输入 <code>e</code> 选择单词的一半。</li>
+<li>输入 <code>b</code> 选择其余部分。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; The Middle Kingdom.</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-3-单词和单词"><a href="#3-3-单词和单词" class="headerlink" title="3.3 单词和单词"></a>3.3 单词和单词</h2><p><code>w</code>, <code>e</code>, <code>b</code> 的命令还有对应的版本 - <code>W</code>, <code>E</code>, <code>B</code> - 它们遍历 <code>WORDS</code> 而不是 <code>words</code>。<code>WORDS</code> 只由空白分隔，而 <code>words</code> 可以由其他字符以及空白分隔。</p>
+<ol>
+<li>将光标移动到标记为 <code>--&gt;</code> 的行的开头。</li>
+<li>重复输入 <code>w</code> 选择单个单词，直到到达行末。</li>
+<li>注意 <code>one-of-a-kind</code> 需要7次按键来遍历。<code>&quot;modal&quot;</code> 需要3次按键。</li>
+<li>将光标移回标记为 <code>--&gt;</code> 的行的开头。</li>
+<li>重复输入 <code>W</code> 选择单个 <code>WORDS</code>。</li>
+<li>注意 <code>one-of-a-kind</code> 和 <code>&quot;modal&quot;</code> 都被一次按键选中。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Helix is a one-of-a-kind &quot;modal&quot; text editor</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-4-更改命令"><a href="#3-4-更改命令" class="headerlink" title="3.4 更改命令"></a>3.4 更改命令</h2><p>输入 <code>c</code> 更改当前选择。</p>
+<p>更改命令删除当前选择并进入插入模式，因此它是 <code>di</code> 的非常常见的简写。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>移动到不正确的单词的开头并输入 <code>w</code> 选择它。</li>
+<li>输入 <code>c</code> 删除单词并进入插入模式。</li>
+<li>输入正确的单词。</li>
+<li>重复直到该行匹配下面的行。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; This paper has heavy words behind it.</span><br><span class="line">    This sentence has incorrect words in it.</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-5-使用数字重复命令"><a href="#3-5-使用数字重复命令" class="headerlink" title="3.5 使用数字重复命令"></a>3.5 使用数字重复命令</h2><p>在移动命令前输入数字以重复多次。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>输入 <code>2w</code> 向前移动2个单词。</li>
+<li>输入 <code>3e</code> 向前移动到第三个单词的结尾。</li>
+<li>输入 <code>2b</code> 向后移动2个单词。</li>
+<li>尝试用不同的数字进行上述操作。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; This is just a line with words you can move around in.</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-6-选择模式"><a href="#3-6-选择模式" class="headerlink" title="3.6 选择模式"></a>3.6 选择模式</h2><p>输入 <code>v</code> 进入选择模式。<br>再次输入 <code>v</code> 或按 <code>Escape</code> 返回普通模式。<br>在选择模式下，每次移动都会扩展选择，而不是替换它。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>移动到 <code>FOO</code> 的 <code>F</code> 并输入 <code>v2w</code> 选择两个单词。</li>
+<li>输入 <code>d</code> 删除两个单词。注意 <code>d</code> 将你返回普通模式。</li>
+<li>移动到 <code>BAZ</code> 的 <code>B</code> 并重复删除它们。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Remove the FOO BAR distracting words BAZ BIZ from this line.</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-7-选择整行"><a href="#3-7-选择整行" class="headerlink" title="3.7 选择整行"></a>3.7 选择整行</h2><p>输入 <code>x</code> 选择整行。再次输入 <code>x</code> 选择下一行。</p>
+<ol>
+<li>将光标移动到标记为 <code>--&gt;</code> 的第二行。</li>
+<li>输入 <code>x</code> 选择行，并输入 <code>d</code> 删除它。</li>
+<li>移动到第四行。</li>
+<li>输入 <code>x</code> 两次或 <code>2x</code> 选择2行，并输入 <code>d</code> 删除。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">--&gt; 1) Roses are red,</span><br><span class="line">--&gt; 2) Mud is fun,</span><br><span class="line">--&gt; 3) Violets are blue,</span><br><span class="line">--&gt; 4) I have a car,</span><br><span class="line">--&gt; 5) Clocks tell time,</span><br><span class="line">--&gt; 6) Sugar is sweet,</span><br><span class="line">--&gt; 7) And so are you.</span><br></pre></td></tr></table></figure>
+
+<p>注意：<code>X</code> 的作用类似于 <code>x</code>，但不会扩展到后续行。<code>X</code> 在空行上不起作用。</p>
+<h2 id="3-8-收缩选择"><a href="#3-8-收缩选择" class="headerlink" title="3.8 收缩选择"></a>3.8 收缩选择</h2><p>输入 <code>;</code> 收缩选择为单个光标。</p>
+<p>有时，你希望取消选择而不移动光标。这可以使用 <code>;</code> 键完成。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>使用你学到的移动方法在行中移动，并尝试在选择文本后使用 <code>;</code> 取消选择。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; This is an error-free line with words to move around in.</span><br></pre></td></tr></table></figure>
+
+<p>注意：在选择模式下，效果相同。<br>注意：另一个相关命令是 <code>Alt-;</code>，它翻转选择。</p>
+<h2 id="第3章总结"><a href="#第3章总结" class="headerlink" title="第3章总结"></a>第3章总结</h2><ul>
+<li>输入 <code>w</code> 向前选择到下一个单词。<ul>
+<li>输入 <code>e</code> 选择到当前单词的结尾。</li>
+<li>输入 <code>b</code> 向后选择到当前单词的开头。</li>
+<li>使用大写对应版本 <code>W</code>, <code>E</code>, <code>B</code> 遍历 <code>WORDS</code>。</li>
+</ul>
+</li>
+<li>输入 <code>d</code> 删除整个选择。<ul>
+<li>输入 <code>c</code> 删除选择并进入插入模式。</li>
+</ul>
+</li>
+<li>在移动命令前输入数字以重复多次。</li>
+<li>输入 <code>v</code> 进入选择模式，在该模式下所有移动扩展选择。</li>
+<li>输入 <code>x</code> 选择当前整行。再次输入 <code>x</code> 选择下一行。</li>
+<li>输入 <code>;</code> 收缩选择。</li>
+</ul>
+<h2 id="4-1-撤销操作"><a href="#4-1-撤销操作" class="headerlink" title="4.1 撤销操作"></a>4.1 撤销操作</h2><p>输入 <code>u</code> 撤销。输入 <code>U</code> 重做。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>移动到第一个错误，并输入 <code>d</code> 删除它。</li>
+<li>输入 <code>u</code> 撤销删除。</li>
+<li>修复行中的所有错误。</li>
+<li>多次输入 <code>u</code> 撤销修复。</li>
+<li>多次输入 <code>U</code>（Shift-u）重做修复。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Fiix the errors on thhis line and reeplace them witth undo.</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-2-复制和粘贴文本"><a href="#4-2-复制和粘贴文本" class="headerlink" title="4.2 复制和粘贴文本"></a>4.2 复制和粘贴文本</h2><p>输入 <code>y</code> 剪切（复制）选择。</p>
+<p>输入 <code>p</code> 在光标后粘贴剪切的选择。</p>
+<p>输入 <code>P</code> 在光标前粘贴剪切的文本。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行, 确保光标在 “banana” 的 <code>b</code> 上。</li>
+<li>输入 <code>w</code> 选择 “banana” 并 <code>y</code> 剪切。</li>
+<li>移动到 “2” 和 “3” 之间的空格并输入 <code>p</code> 粘贴。</li>
+<li>在 “3” 和 “4” 之间重复。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; 1 banana 2 3 4</span><br><span class="line">    1 banana 2 banana 3 banana 4</span><br></pre></td></tr></table></figure>
+
+<p>注意：每当你删除或更改文本时，Helix 会复制更改的文本。使用 <code>Alt-d</code> &#x2F; <code>Alt-c</code> 代替以避免此情况。</p>
+<p>注意：Helix 默认不共享系统剪贴板。输入 <code>Space + y</code> &#x2F; <code>p</code> 剪切&#x2F;粘贴到系统剪贴板。</p>
+<h2 id="4-3-在文件中搜索"><a href="#4-3-在文件中搜索" class="headerlink" title="4.3 在文件中搜索"></a>4.3 在文件中搜索</h2><p>输入 <code>/</code> 在文件中向前搜索，按 <code>Enter</code> 确认搜索。</p>
+<p>输入 <code>n</code> 跳到下一个搜索匹配项。</p>
+<p>输入 <code>N</code> 跳到上一个搜索匹配项。</p>
+<ol>
+<li>输入 <code>/</code> 并输入一个常见单词，例如 ‘banana’。</li>
+<li>按 <code>Enter</code> 确认搜索。</li>
+<li>使用 <code>n</code> 和 <code>N</code> 循环浏览匹配项。</li>
+</ol>
+<p>搜索使用正则表达式，允许你定位更复杂的表达式，这将在选择命令的课程中学习。</p>
+<p>注意：要向后搜索，输入 <code>?</code>（Shift-&#x2F;）。</p>
+<p>注意：与 Vim 不同，<code>?</code> 不改变搜索方向。</p>
+<p><code>N</code> 总是向后，<code>n</code> 总是向前。</p>
+<h2 id="第4章总结"><a href="#第4章总结" class="headerlink" title="第4章总结"></a>第4章总结</h2><ul>
+<li>输入 <code>u</code> 撤销。输入 <code>U</code> 重做。</li>
+<li>输入 <code>y</code> 剪切（复制）文本并输入 <code>p</code> 粘贴。<ul>
+<li>使用 <code>Space + y</code> 和 <code>Space + p</code> 剪切&#x2F;粘贴到系统剪贴板。</li>
+</ul>
+</li>
+<li>输入 <code>/</code> 在文件中向前搜索，输入 <code>?</code> 向后搜索。<ul>
+<li>使用 <code>n</code> 和 <code>N</code> 循环浏览搜索匹配项。</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-1-多光标"><a href="#5-1-多光标" class="headerlink" title="5.1 多光标"></a>5.1 多光标</h2><p>输入 <code>C</code> 复制光标到下一个合适的行。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的第一行。将光标放在 <code>--&gt;</code> 后面。</li>
+<li>输入 <code>C</code> 复制光标到下一个合适的行。注意它跳过了中间的行。你输入的键现在会影响两个光标。</li>
+<li>使用插入模式更正这些行。两个光标将同时修复两行。</li>
+<li>输入 <code>,</code> 删除第二个光标。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Fix th two nes at same ime.</span><br><span class="line">--&gt;</span><br><span class="line">--&gt; Fix th two nes at same ime.</span><br><span class="line">    Fix these two lines at the same time.</span><br></pre></td></tr></table></figure>
+
+<p>注意：按 <code>Alt-C</code> 以上同样适用。</p>
+<h2 id="5-2-选择命令"><a href="#5-2-选择命令" class="headerlink" title="5.2 选择命令"></a>5.2 选择命令</h2><p>输入 <code>s</code> 选择选择中的匹配项。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>输入 <code>x</code> 选择行。</li>
+<li>输入 <code>s</code>。将出现一个提示。</li>
+<li>输入 ‘apples’ 并按 <code>Enter</code>。行中的两个 <code>apples</code> 都会被选择。</li>
+<li>现在你可以输入 <code>c</code> 更改 <code>apples</code> 为其他内容，例如 <code>oranges</code>。</li>
+<li>按 <code>Escape</code> 退出插入模式。</li>
+<li>输入 <code>,</code> 删除第二个光标。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; I like to eat apples since my favorite fruit is apples.</span><br><span class="line">    I like to eat oranges since my favorite fruit is oranges.</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-3-通过正则表达式选择"><a href="#5-3-通过正则表达式选择" class="headerlink" title="5.3 通过正则表达式选择"></a>5.3 通过正则表达式选择</h2><p>像搜索一样，选择命令选择正则表达式，而不仅仅是精确匹配。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>用 <code>x</code> 选择行，然后输入 <code>s</code>。</li>
+<li>输入 ‘ +’ 选择任意数量的连续空格 &gt;1，然后按 <code>Enter</code>。</li>
+<li>输入 <code>c</code> 将匹配更改为单个空格。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; This  sentence has   some      extra spaces.</span><br><span class="line">    This sentence has some extra spaces.</span><br></pre></td></tr></table></figure>
+
+<p>注意：如果你想进行查找和替换，选择命令是方法。选择要替换的文本 - 输入 <code>%</code> 选择整个文件 - 然后执行上述步骤。</p>
+<h2 id="5-4-对齐选择"><a href="#5-4-对齐选择" class="headerlink" title="5.4 对齐选择"></a>5.4 对齐选择</h2><p>输入 <code>&amp;</code> 对齐选择的内容。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的第一行。将光标放在箭头后面的空白处。</li>
+<li>输入 <code>C</code> 四次或 <code>4C</code>。</li>
+<li>输入 <code>W</code> 选择数字和括号。</li>
+<li>输入 <code>&amp;</code> 对齐单词。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">--&gt; 97) lorem</span><br><span class="line">--&gt; 98) ipsum</span><br><span class="line">--&gt; 99) dolor</span><br><span class="line">--&gt; 100) sit</span><br><span class="line">--&gt; 101) amet</span><br></pre></td></tr></table></figure>
+
+<p>注意：<code>&amp;</code> 只关心选择的“头部”的对齐 - 移动的一端。另一端称为“锚点”。</p>
+<h2 id="5-5-将选择拆分为行"><a href="#5-5-将选择拆分为行" class="headerlink" title="5.5 将选择拆分为行"></a>5.5 将选择拆分为行</h2><p>按 <code>Alt-s</code> 将选择拆分为行。</p>
+<ol>
+<li>将光标移动到表格的第一行。</li>
+<li>使用 <code>6x</code> 选择整个表格。</li>
+<li>按 <code>Alt-s</code> 在每行拆分选择。</li>
+<li>使用 <code>&amp;</code> 对齐表格。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">| FRUIT   | AMOUNT |</span><br><span class="line">|---------|--------|</span><br><span class="line">| Apples  | 8      |</span><br><span class="line">| Bananas | 6      |</span><br><span class="line">| Oranges | 3      |</span><br><span class="line">| Donuts  | 4      |</span><br></pre></td></tr></table></figure>
+
+<h2 id="第5章总结"><a href="#第5章总结" class="headerlink" title="第5章总结"></a>第5章总结</h2><ul>
+<li>输入 <code>C</code> 复制光标到下一个合适的行，<code>Alt-C</code> 到上一个合适的行。</li>
+<li>输入 <code>s</code> 选择当前选择中的所有正则表达式模式实例。</li>
+<li>输入 <code>&amp;</code> 对齐选择。</li>
+<li>按 <code>Alt-s</code> 将选择拆分为行。</li>
+</ul>
+<h2 id="6-1-选择到字符"><a href="#6-1-选择到字符" class="headerlink" title="6.1 选择到字符"></a>6.1 选择到字符</h2><p>输入 <code>f&lt;ch&gt;</code> 选择到并包括一个字符（查找）。</p>
+<p>输入 <code>t&lt;ch&gt;</code> 选择到但不包括一个字符（直到）。</p>
+<p>输入大写 <code>F</code> &#x2F; <code>T</code> 向后执行相同操作。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。将光标放在第一个破折号上。</li>
+<li>输入 <code>f[</code> 选择到方括号。</li>
+<li>输入 <code>d</code> 删除选择。</li>
+<li>转到行末并用 <code>F]</code> 重复。</li>
+<li>移动到第二行标记为 <code>--&gt;</code>，就在箭头之后。</li>
+<li>使用 <code>t</code> 和 <code>T</code> 删除句子周围的破折号。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--&gt; -----[Free this sentence of its brackets!]----&gt; ------Free this sentence of its dashes!---```</span><br><span class="line"></span><br><span class="line">注意：与 Vim 不同，Helix 不将这些命令限制在当前行。它在文件中查找字符。</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-2-替换命令"><a href="#6-2-替换命令" class="headerlink" title="6.2 替换命令"></a>6.2 替换命令</h2><p>输入 <code>r&lt;ch&gt;</code> 将所有选择的字符替换为 <code>&lt;ch&gt;</code>。</p>
+<ol>
+<li>移动到表格的第二行，将光标放在第一个 <code>=</code> 上。</li>
+<li>输入 <code>t|</code>（Shift-\）选择 <code>=</code> 分隔符。</li>
+<li>输入 <code>r-</code> 将分隔符替换为破折号。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">| Month | Days |</span><br><span class="line">|=======|------|</span><br><span class="line">| Jan   | 31   |</span><br><span class="line">| Feb   | 28   |</span><br><span class="line">| Mar   | 31   |</span><br><span class="line">| ...   | ...  |</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-3-重复"><a href="#6-3-重复" class="headerlink" title="6.3 重复"></a>6.3 重复</h2><p>输入 <code>.</code> 重复上一个插入命令。</p>
+<p>按 <code>Alt-.</code> 重复上一个 <code>f</code> &#x2F; <code>t</code> 选择。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>进行一次更改、插入或追加，并用 <code>.</code> 重复。</li>
+<li>尝试使用 <code>Alt-.</code> 与 <code>f</code> 和 <code>t</code>，例如选择多个句子。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--&gt; This is some text for you to repeat things. You can repeat</span><br><span class="line">    insertions like changing words, or repeat selections like</span><br><span class="line">    f / t.</span><br></pre></td></tr></table></figure>
+
+<h2 id="第6章总结"><a href="#第6章总结" class="headerlink" title="第6章总结"></a>第6章总结</h2><ul>
+<li>输入 <code>f</code> &#x2F; <code>F</code> 向前&#x2F;向后扩展选择到并包括一个字符。</li>
+<li>输入 <code>t</code> &#x2F; <code>T</code> 向前&#x2F;向后扩展选择到但不包括一个字符。</li>
+<li>输入 <code>r</code> 替换选择的字符。</li>
+<li>输入 <code>.</code> 重复上一个插入。</li>
+<li>按 <code>Alt-.</code> 重复上一个 <code>f</code> &#x2F; <code>t</code> 选择。</li>
+</ul>
+<h2 id="7-1-用剪切文本替换"><a href="#7-1-用剪切文本替换" class="headerlink" title="7.1 用剪切文本替换"></a>7.1 用剪切文本替换</h2><p>输入 <code>R</code> 用之前剪切的文本替换选择。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>输入 <code>w</code> 选择 “watermelons” 然后 <code>y</code> 剪切。</li>
+<li>用 <code>w</code> 选择 “oranges”。</li>
+<li>输入 <code>R</code> 用 “watermelons” 替换 “oranges”。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; I like watermelons because oranges are refreshing.</span><br><span class="line">    I like watermelons because watermelons are refreshing.</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-2-合并行"><a href="#7-2-合并行" class="headerlink" title="7.2 合并行"></a>7.2 合并行</h2><p>输入 <code>J</code> 合并选择中的行。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>输入 <code>x</code> 四次或 <code>4x</code> 选择所有四行。</li>
+<li>输入 <code>J</code> 合并这些行。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--&gt; This sentence</span><br><span class="line">is spilling over</span><br><span class="line">onto other</span><br><span class="line">lines.</span><br><span class="line"></span><br><span class="line">    This sentence is spilling over onto other lines.</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-3-缩进行"><a href="#7-3-缩进行" class="headerlink" title="7.3 缩进行"></a>7.3 缩进行</h2><p>输入 <code>&gt;</code> 缩进行，输入 <code>&lt;</code> 取消缩进。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>向下移动到第二行并输入 <code>&gt;</code> 缩进。</li>
+<li>移动到第三行并输入 <code>&lt;</code> 取消缩进。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">--&gt; These lines</span><br><span class="line">    are indented</span><br><span class="line">         very poorly.</span><br><span class="line"></span><br><span class="line">    These lines</span><br><span class="line">    are indented</span><br><span class="line">    much better.</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-4-增加和减少数字"><a href="#7-4-增加和减少数字" class="headerlink" title="7.4 增加和减少数字"></a>7.4 增加和减少数字</h2><p>按 <code>Ctrl-a</code> 增加选择的数字。</p>
+<p>按 <code>Ctrl-x</code> 减少选择的数字。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的第三行。</li>
+<li>按 <code>Ctrl-a</code> 增加标记为2的第二个点。</li>
+<li>重复增加标记为3的点。</li>
+<li>移动到最后一个点并按 <code>Ctrl-x</code> 减少6。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">--&gt; 1) First point.</span><br><span class="line">--&gt; 2) Added point.</span><br><span class="line">--&gt; 2) Next point.</span><br><span class="line">--&gt; 3) Another point.</span><br><span class="line">--&gt; 6) Last point.</span><br></pre></td></tr></table></figure>
+
+<h2 id="第7章总结"><a href="#第7章总结" class="headerlink" title="第7章总结"></a>第7章总结</h2><ul>
+<li>输入 <code>R</code> 用剪切的文本替换选择。</li>
+<li>输入 <code>J</code> 合并选择中的行。</li>
+<li>输入 <code>&gt;</code> 和 <code>&lt;</code> 缩进&#x2F;取消缩进行。</li>
+<li>按 <code>Ctrl-a</code> 增加选择的数字。</li>
+<li>按 <code>Ctrl-x</code> 减少选择的数字。</li>
+</ul>
+<h2 id="8-1-寄存器"><a href="#8-1-寄存器" class="headerlink" title="8.1 寄存器"></a>8.1 寄存器</h2><p>寄存器是由字符标识的容器，用于存储诸如剪切文本之类的内容。寄存器还用于存储最近的搜索词以及宏，你将在下一部分学习。</p>
+<p>输入 <code>&quot; &lt;ch&gt;</code> 选择寄存器 <code>&lt;ch&gt;</code>。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>输入 <code>w</code> 选择 “watermelons” 并剪切 <code>y</code>。</li>
+<li>输入 <code>w</code> 选择 “bananas”。</li>
+<li>输入 <code>&quot;b</code> 更改为寄存器 <code>b</code> 并剪切 <code>y</code>。</li>
+<li>选择 “mangoes” 并输入 <code>R</code> 用 “watermelons” 替换。</li>
+<li>选择 “pineapples” 然后输入 <code>&quot;b R</code> 用 “bananas” 替换。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; I like watermelons and bananas because my favorite fruits</span><br><span class="line">    are mangoes and pineapples.</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-2-宏"><a href="#8-2-宏" class="headerlink" title="8.2 宏"></a>8.2 宏</h2><p>宏是一种记录你想重复的一组操作的方法。你还可以将宏记录到特定寄存器（默认是 <code>@</code>）。</p>
+<p>输入 <code>Q</code> 开始录制宏 - 你应该在屏幕底部看到一个弹出窗口。</p>
+<p>再次输入 <code>Q</code> 停止录制。输入 <code>q</code> 从寄存器 <code>@</code>（默认）重复宏。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的第一行, 确保你的光标在箭头的 <code>&gt;</code> 上。</li>
+<li>输入 <code>Q</code> 开始录制。</li>
+<li>编辑该行使其看起来像下面的行。</li>
+<li>退出插入并再次输入 <code>Q</code> 停止录制。</li>
+<li>移动到下面的行并再次将光标放在 <code>&gt;</code> 上。</li>
+<li>输入 <code>q</code> 重复宏。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--&gt; ... sentence doesn&#x27;t have its first and last ... .</span><br><span class="line">--&gt; ... sentence doesn&#x27;t have its first and last ... .</span><br><span class="line">    This sentence doesn&#x27;t have its first and last word.</span><br></pre></td></tr></table></figure>
+
+<h2 id="第8章总结"><a href="#第8章总结" class="headerlink" title="第8章总结"></a>第8章总结</h2><ul>
+<li>输入 <code>&quot;</code> 选择不同的寄存器。</li>
+<li>输入 <code>Q</code> 开始并停止将宏记录到寄存器，默认是 <code>@</code>。</li>
+<li>输入 <code>q</code> 从 <code>@</code> 或选定的寄存器重放宏。</li>
+</ul>
+<h2 id="9-1-搜索选择"><a href="#9-1-搜索选择" class="headerlink" title="9.1 搜索选择"></a>9.1 搜索选择</h2><p>最近一次使用 <code>/</code> 搜索的内容存储在寄存器 <code>/</code> 中。</p>
+<p><code>n</code> 和 <code>N</code> 都指向寄存器 <code>/</code>，这意味着我们可以设置该寄存器而无需输入搜索内容。</p>
+<p>输入 <code>*</code> 将选择复制到寄存器 <code>/</code>，将搜索词设置为选择内容。这会复制主要选择，你将在循环选择部分了解更多。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>选择 “horse” 并输入 <code>e</code>，然后输入 <code>*</code>。</li>
+<li>使用 <code>n</code> 和 <code>N</code> 跳转到 “horse” 的实例。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; A horse is a horse, of course, of course,</span><br><span class="line">--&gt; And no one can talk to a horse of course.</span><br></pre></td></tr></table></figure>
+
+<p>注意：<code>*</code> 类似于 <code>/y</code> 的简写，因为它实际上只是将选择复制到 <code>/</code> 寄存器。</p>
+<h2 id="9-2-添加选择到下一个搜索匹配项"><a href="#9-2-添加选择到下一个搜索匹配项" class="headerlink" title="9.2 添加选择到下一个搜索匹配项"></a>9.2 添加选择到下一个搜索匹配项</h2><p>在选择模式（<code>v</code>）中使用 <code>n</code> 和 <code>N</code> 的属性是它不会移动选择到下一个匹配项，而是在每个匹配项上添加一个新选择。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>选择第一个 “bat” 并输入 <code>*</code> 设置为搜索。</li>
+<li>输入 <code>v</code> 进入选择模式。</li>
+<li>输入 <code>n</code> 选择其他 “bat”。</li>
+<li>使用 <code>c</code> 或 <code>r</code> 将 “bat” 更改为 “cat”。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Everybody wants to be a bat,</span><br><span class="line">--&gt; because a cat&#x27;s the only bat</span><br><span class="line">--&gt; who knows where it&#x27;s at.</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-3-使用跳转列表"><a href="#9-3-使用跳转列表" class="headerlink" title="9.3 使用跳转列表"></a>9.3 使用跳转列表</h2><p>Helix 可以跟踪“大跳转”，如搜索或跳转到代码中的函数定义。它将这些存储在所谓的跳转列表中。</p>
+<p>按 <code>Ctrl-s</code> 手动保存当前位置到跳转列表。</p>
+<p>按 <code>Ctrl-i</code>（进入）和 <code>Ctrl-o</code>（退出）分别在跳转列表中前进和后退。</p>
+<ol>
+<li>按 <code>Ctrl-s</code> 在某个位置。</li>
+<li>在文件中移动到很远的地方。</li>
+<li>按 <code>Ctrl-o</code>（只按一次！）返回到保存的位置。</li>
+</ol>
+<h2 id="第9章总结"><a href="#第9章总结" class="headerlink" title="第9章总结"></a>第9章总结</h2><ul>
+<li>输入 <code>*</code> 将搜索寄存器设置为主要选择。</li>
+<li>在选择模式中输入 <code>n</code> &#x2F; <code>N</code> 在每个搜索匹配项上添加选择。</li>
+<li>按 <code>Ctrl-s</code> 保存位置到跳转列表。</li>
+<li>按 <code>Ctrl-i</code> 和 <code>Ctrl-o</code> 在跳转列表中前进和后退。</li>
+</ul>
+<h2 id="10-1-循环和删除选择"><a href="#10-1-循环和删除选择" class="headerlink" title="10.1 循环和删除选择"></a>10.1 循环和删除选择</h2><p>输入 <code>)</code> 和 <code>(</code> 分别在选择中前后循环主要选择。</p>
+<p>按 <code>Alt-,</code> 删除主要选择。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>用 <code>xx</code> 或 <code>2x</code> 选择两行。</li>
+<li>输入 <code>s</code> 选择，输入 “would” 并回车。</li>
+<li>使用 <code>(</code> 和 <code>)</code> 循环主要选择并删除第二个 “would” 用 <code>Alt-,</code>。</li>
+<li>输入 <code>c</code> 将剩余的 “would” 更改为 “wood”。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; How much would would a wouldchuck chuck</span><br><span class="line">--&gt; if a wouldchuck could chuck would?</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-2-循环选择内容"><a href="#10-2-循环选择内容" class="headerlink" title="10.2 循环选择内容"></a>10.2 循环选择内容</h2><p>按 <code>Alt-)</code> 和 <code>Alt-(</code> 分别在选择内容中前后循环。</p>
+<ol>
+<li>将光标移动到下面标记为 <code>--&gt;</code> 的行。</li>
+<li>用 <code>xx</code> 或 <code>2x</code> 选择两行。</li>
+<li>输入 <code>s</code> 选择，输入 “through|water|know” 并回车。</li>
+<li>使用 <code>Alt-(</code> 和 <code>Alt-)</code> 循环选择内容。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Jumping through the water,</span><br><span class="line">--&gt; daring to know.</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-3-更改大小写"><a href="#10-3-更改大小写" class="headerlink" title="10.3 更改大小写"></a>10.3 更改大小写</h2><p>输入 <code>~</code> 切换所选字母的大小写。</p>
+<p>输入 &#96;&#96; 将所选字母设为小写。</p>
+<p>按 <code>Alt-</code> 将所选字母设为大写。</p>
+<ol>
+<li>将光标移动到标记为 <code>--&gt;</code> 的第一行。</li>
+<li>选择每个错误的大写或小写字母并输入 <code>~</code> 更改它们。</li>
+<li>移动到标记为 <code>--&gt;</code> 的第二行。</li>
+<li>输入 <code>x</code> 选择整行。</li>
+<li>输入 &#96;&#96; 将整行更改为小写。</li>
+<li>移动到标记为 <code>--&gt;</code> 的第三行。</li>
+<li>输入 <code>x</code> 选择整行。</li>
+<li>按 <code>Alt-</code> 将整行更改为大写。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--&gt; thIs sENtencE hAs MIS-cApitalIsed leTTerS.</span><br><span class="line">--&gt; this SENTENCE SHOULD all be in LOWERCASE.</span><br><span class="line">--&gt; THIS sentence should ALL BE IN uppercase!</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-4-拆分选择"><a href="#10-4-拆分选择" class="headerlink" title="10.4 拆分选择"></a>10.4 拆分选择</h2><p>输入 <code>S</code> 在正则表达式模式上拆分每个选择。</p>
+<ol>
+<li>将光标移动到 — 下的行。</li>
+<li>输入 <code>xx</code> &#x2F; <code>2x</code> 选择这些行。</li>
+<li>输入 <code>S</code> 然后 <code>.</code> | <code>!</code> 回车（注意 <code>.</code> 和 <code>!</code> 后的空格）。这将有效地在每个句子上拆分选择。</li>
+<li>按 <code>Alt-;</code> 翻转选择。</li>
+<li>输入 <code>;</code> 将选择减少为单个字符 - 每个句子的第一个字母。</li>
+<li>按 <code>Alt-</code> 将所有选定字母转换为大写。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">these are sentences. some sentences don&#x27;t start with uppercase</span><br><span class="line">letters! that is not good grammar. you can fix this.</span><br></pre></td></tr></table></figure>
+
+<h2 id="第10章总结"><a href="#第10章总结" class="headerlink" title="第10章总结"></a>第10章总结</h2><ul>
+<li>使用 <code>)</code> 和 <code>(</code> 在选择中前后循环主要选择。<ul>
+<li>按 <code>Alt-,</code> 删除主要选择。</li>
+<li>按 <code>Alt-)</code> 和 <code>Alt-(</code> 在选择内容中前后循环。</li>
+</ul>
+</li>
+<li>输入 <code>~</code> 切换所选字母的大小写。<ul>
+<li>使用 &#96;&#96; 和 <code>Alt-</code> 分别将所选字母设为小写和大写。</li>
+</ul>
+</li>
+<li>输入 <code>S</code> 在正则表达式模式上拆分选择。</li>
+</ul>
+<h2 id="11-1-注释一行"><a href="#11-1-注释一行" class="headerlink" title="11.1 注释一行"></a>11.1 注释一行</h2><p>按 <code>Ctrl-c</code> 注释光标下的行。<br>要取消注释行，再次按 <code>Ctrl-c</code>。</p>
+<ol>
+<li>将光标移动到标记为 <code>--&gt;</code> 的行。</li>
+<li>注释标记为 <code>--&gt;</code> 的行。</li>
+<li>尝试取消注释行。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; Comment me please</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-2-注释多行"><a href="#11-2-注释多行" class="headerlink" title="11.2 注释多行"></a>11.2 注释多行</h2><p>使用选择和多光标功能，你可以注释多行，只要它在选择或光标下。</p>
+<ol>
+<li>将光标移动到标记为 <code>--&gt;</code> 的行。</li>
+<li>尝试选择或添加更多光标到其他标记为 <code>--&gt;</code> 的行。</li>
+<li>注释这些行。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">--&gt; How many are you going to comment?</span><br><span class="line">--&gt; Is this enough for a comment?</span><br><span class="line">--&gt; What are you doing?!</span><br><span class="line">--&gt; Stop commenting me!</span><br><span class="line">--&gt; AAAAaargh!!!</span><br></pre></td></tr></table></figure>
+
+<p>注意：如果在选择或多光标下已有注释行，它们不会被取消注释，而是再次注释。</p>
+<h2 id="第11章总结"><a href="#第11章总结" class="headerlink" title="第11章总结"></a>第11章总结</h2><ul>
+<li>使用 <code>Ctrl-c</code> 注释光标下的行。再次按 <code>Ctrl-c</code> 取消注释。</li>
+<li>要注释多行，请在输入 <code>Ctrl-c</code> 之前使用选择和多光标。</li>
+<li>注释行无法取消注释，而是再次注释。</li>
+</ul>
+<h2 id="12-1-使用匹配模式跳转"><a href="#12-1-使用匹配模式跳转" class="headerlink" title="12.1 使用匹配模式跳转"></a>12.1 使用匹配模式跳转</h2><p>从普通模式切换到匹配模式，输入 <code>m</code>。此功能特别适用于处理括号对及其内容。</p>
+<p>有几种操作可以在匹配模式下执行，如帮助弹出窗口所示。要跳转到匹配的括号对，只需按 <code>mm</code>。例如，在下面的行（以 <code>--&gt;</code> 开头），在普通模式下将光标移动到 <code>(</code>，然后按 <code>mm</code> 跳转到匹配的 <code>)</code>。</p>
+<p>在下面的行中也可以这样做：例如，移动到 <code>]</code>，按 <code>mm</code> 跳转到 <code>[</code> 。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--&gt; you can (jump between matching parenthesis)</span><br><span class="line">--&gt; or between matching [ square brackets ]</span><br><span class="line">--&gt; now &#123; you know the drill: this works with brackets too &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-2-使用匹配模式选择内部"><a href="#12-2-使用匹配模式选择内部" class="headerlink" title="12.2 使用匹配模式选择内部"></a>12.2 使用匹配模式选择内部</h2><p>匹配模式还允许你选择括号或其他定界符之间的“内部”内容。在下面的行中：</p>
+<ul>
+<li>移动到 <code>--&gt;</code> 行，将光标放在任意括号之间的位置，例如 <code>x</code>，然后按 <code>mi(</code> 或 <code>mi)</code> 选择整个括号内的内容（不包括括号）。如往常一样，你可以对选择执行任何操作（例如，按 <code>c</code> 更改它）。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; outside and (inside x parenthesis) - and outside again</span><br></pre></td></tr></table></figure>
+
+<p>在下面测试你是否可以对 <code>[]</code>，<code>{}</code> 或嵌套组合执行相同操作（这将作用于最近的括号对）。这也适用于 <code>&quot;&quot;</code> 等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; test [ with square brackets ] !</span><br><span class="line">--&gt; try ( with nested [ pairs of ( parenthesis) and &quot;brackets&quot; ])</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-3-使用匹配模式选择周围"><a href="#12-3-使用匹配模式选择周围" class="headerlink" title="12.3 使用匹配模式选择周围"></a>12.3 使用匹配模式选择周围</h2><p>你还可以选择“周围”的内容，即括号内的内容和定界符本身，使用 <code>ma</code> 选择。</p>
+<p>例如，移动到下面的行，将光标移动到 <code>()</code> 之间的任何位置，并输入 <code>ma(</code> 或 <code>ma)</code> 选择括号内的内容，包括括号本身。</p>
+<p>如往常一样，你可以对选择执行任何操作，例如用 <code>ma(d</code> 删除所有内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; you ( select x around ) to include delimiters in the select</span><br></pre></td></tr></table></figure>
+
+<p>这自然也适用于其他定界符：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; try [ with &#x27;square&#x27; brackets ] too!</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-4-使用匹配模式包围"><a href="#12-4-使用匹配模式包围" class="headerlink" title="12.4 使用匹配模式包围"></a>12.4 使用匹配模式包围</h2><p>匹配模式还可用于在当前选择周围添加包围。例如，移动到下面的行，然后：</p>
+<ol>
+<li>选择 “select all of this” 行段（例如，将光标在普通模式下移动到 <code>select</code> 的开头，然后输入 <code>v</code> 进入选择模式，然后选择接下来的4个单词 <code>4e</code>）。</li>
+<li>输入 <code>ms(</code> 或 <code>ms)</code> 将选择包围在一对括号内。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; so, select all of this, and surround it with ()</span><br></pre></td></tr></table></figure>
+
+<p>你可以对其他定界符执行相同操作：例如，在 <code>WORD</code> 上输入 <code>ms&#39;</code> 将其包围在一对单引号内。你也可以尝试添加一对 <code>&quot;&quot;</code>、<code>{}</code> 或 <code>[]</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; surround this WORD !</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-5-使用匹配模式删除包围"><a href="#12-5-使用匹配模式删除包围" class="headerlink" title="12.5 使用匹配模式删除包围"></a>12.5 使用匹配模式删除包围</h2><p>你可以使用 <code>md</code> 命令删除包围的定界符对。在下面的行中，将光标移动到 <code>()</code> 的任何位置，例如 <code>x</code>，然后在普通模式下按 <code>md(</code> 或 <code>md)</code> 删除包围的括号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; delete (the x pair of parenthesis) from within!</span><br></pre></td></tr></table></figure>
+
+<p>你当然可以删除其他种类的包围：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--&gt; delete (nested [delimiters]): &quot;this&quot; will delete the nearest</span><br><span class="line">    matching surrounding pair.</span><br><span class="line">--&gt; delete &quot;layers &quot;of&quot; quote marks&quot; too: this will delete the</span><br><span class="line">    nearest previous and following quote marks</span><br></pre></td></tr></table></figure>
+
+<p>尝试删除不存在的包围定界符将在底部栏打印错误并且不执行任何操作。</p>
+<h2 id="12-6-使用匹配模式替换包围"><a href="#12-6-使用匹配模式替换包围" class="headerlink" title="12.6 使用匹配模式替换包围"></a>12.6 使用匹配模式替换包围</h2><p>你可以使用 <code>mr</code> 命令替换包围的定界符对。在下面的行中，将光标移动到 <code>()</code> 内的任意位置，例如 <code>x</code>，然后在普通模式下按 <code>mr([</code> 将 <code>()</code> 替换为 <code>[]</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt; replace the (pair from x within), with something else</span><br></pre></td></tr></table></figure>
+
+<p>此命令将作用于最近的包围对，因此你可以在以下尝试替换不同的包围：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--&gt; some (nested surroundings [can be replaced])</span><br><span class="line">--&gt; this &quot;works with &#x27;other surroundings&#x27; too&quot;</span><br></pre></td></tr></table></figure>
+
+<p>你可以尝试替换不存在的对：这将在底部栏显示错误警告并且不执行任何操作。</p>
+<h2 id="第12章总结"><a href="#第12章总结" class="headerlink" title="第12章总结"></a>第12章总结</h2><p>你可以通过 <code>m</code> 键进入匹配模式；这将显示可用操作的弹出窗口。它允许你：</p>
+<ul>
+<li>使用 <code>mm</code> 跳转到匹配的定界符对（光标下必须有属于一对的定界符）。</li>
+<li>使用 <code>mi(</code> 和类似命令选择包围光标的定界符对内的内容（即选择内容但不包括定界符）。</li>
+<li>使用 <code>ma(</code> 和类似命令选择包围光标的定界符对周围的内容（即选择内容和定界符）。</li>
+<li>使用 <code>md(</code> 和类似命令删除包围的定界符。</li>
+<li>使用 <code>ms(</code> 在选择周围添加定界符。</li>
+<li>使用 <code>mr([</code> 替换选择周围的定界符对。</li>
+</ul>
+<h2 id="13-1-创建新分屏"><a href="#13-1-创建新分屏" class="headerlink" title="13.1 创建新分屏"></a>13.1 创建新分屏</h2><p>在普通模式下，按 <code>Ctrl-w</code> 打开窗口菜单，显示可用命令列表。</p>
+<p>要在当前窗口的右半部分垂直分屏中打开一个新空缓冲区，请使用 <code>Ctrl-w nv</code>（即同时按 <code>Ctrl</code> 和 <code>w</code>，然后按 <code>n</code>，再按 <code>v</code>）。</p>
+<p>当前窗口将垂直分为两部分。右半部分将出现一个新的空缓冲区分屏，光标将跳转到新的垂直分屏。</p>
+<p>要在水平分屏中创建一个新空缓冲区，按 <code>Ctrl-w ns</code>。此操作将当前窗口水平分为两部分，创建一个新缓冲区，并将光标移动到新的水平分屏。</p>
+<h2 id="13-2-在分屏之间移动"><a href="#13-2-在分屏之间移动" class="headerlink" title="13.2 在分屏之间移动"></a>13.2 在分屏之间移动</h2><ul>
+<li>使用 <code>Ctrl-w k</code> 移动到当前分屏上方的分屏。</li>
+<li>使用 <code>Ctrl-w j</code> 移动到下方的分屏。</li>
+<li>使用 <code>Ctrl-w h</code> 移动到左侧的分屏。</li>
+<li>使用 <code>Ctrl-w l</code> 移动到右侧的分屏。</li>
+<li>按 <code>Ctrl-w w</code> 按打开顺序导航到下一个分屏。</li>
+</ul>
+<p>你现在可以在新的缓冲区和分屏中执行任何操作。完成后，可以按 <code>Ctrl-w q</code> 关闭分屏。使用 <code>Ctrl-w l</code> 移动到右下角的分屏，然后按 <code>Ctrl-w q</code> 关闭此特定分屏。</p>
+<p>你也可以按 <code>Ctrl-w o</code> 关闭除当前分屏外的所有分屏。使用 <code>Ctrl-w nv</code> 打开第三个垂直分屏，然后使用 <code>Ctrl-w h</code> 两次移动到最左边的分屏，再从分屏内按 <code>Ctrl-w o</code> 关闭除该分屏外的所有分屏。</p>
+<h2 id="13-3-分屏当前缓冲区"><a href="#13-3-分屏当前缓冲区" class="headerlink" title="13.3 分屏当前缓冲区"></a>13.3 分屏当前缓冲区</h2><p>使用 <code>Ctrl-w s</code> 将当前缓冲区水平分屏，使用 <code>Ctrl-w v</code> 将其垂直分屏，并在两个分屏中打开缓冲区。</p>
+<p>使用 <code>Ctrl-w o</code> 关闭额外分屏，返回到单窗口视图。</p>
+<h2 id="13-4-使用命令分屏"><a href="#13-4-使用命令分屏" class="headerlink" title="13.4 使用命令分屏"></a>13.4 使用命令分屏</h2><p>可以使用 <code>:vsplit</code>（或简写 <code>:vs</code>）和 <code>:hsplit</code>（或简写 <code>:hs</code>）命令分别垂直或水平分屏特定缓冲区。例如，输入命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:vs something</span><br></pre></td></tr></table></figure>
+
+<p>在右侧打开一个名为 “something” 的新垂直分屏。这里，”something” 不是现有文件，因此将打开一个具有该名称的新缓冲区；</p>
+<p>但是，你可以用任何文件名替换 “something” 在新缓冲区中打开它。类似地，你可以输入命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:hs some_more</span><br></pre></td></tr></table></figure>
+
+<p>在下半部分打开一个名为 “some_more” 的新缓冲区。”some_more” 可以是任何文件或路径，以打开该特定文件或路径而不是新空缓冲区。</p>
+<h2 id="13-5-交换分屏"><a href="#13-5-交换分屏" class="headerlink" title="13.5 交换分屏"></a>13.5 交换分屏</h2><p>使用 <code>:vs hello1</code> 在左侧打开一个分屏，然后使用 <code>:hs hello2</code> 在下方打开一个分屏。</p>
+<p>在 <code>hello2</code> 中，按 <code>Ctrl-w K</code> 与上方的分屏交换。现在 <code>hello2</code> 在顶部而 <code>hello1</code> 在底部。</p>
+<p>仍然在 <code>hello2</code> 中，按 <code>Ctrl-w H</code> 与左侧的分屏交换：现在 <code>hello2</code> 在左侧，教程在右上角。按 <code>Ctrl-w</code> 后，可以使用 <code>HJKL</code> 与左侧&#x2F;下方&#x2F;上方&#x2F;右侧的缓冲区交换。</p>
+<p>返回教程分屏，按 <code>Ctrl-w o</code> 仅保留此分屏。</p>
+<h2 id="13-6-转换分屏"><a href="#13-6-转换分屏" class="headerlink" title="13.6 转换分屏"></a>13.6 转换分屏</h2><p>使用 <code>:vs hello1</code> 在左侧打开一个分屏，然后使用 <code>:vs hello2</code> 在下方打开一个分屏。</p>
+<p>移动到教程分屏，然后按 <code>Ctrl-w t</code> 转换从此窗口打开的垂直分屏：现在 <code>hello1</code> 和 <code>hello2</code> 在教程下方，而不是右侧。再次按 <code>Ctrl-w t</code> 转换回来。</p>
+<p>移动到 <code>hello1</code> 分屏，然后按 <code>Ctrl-w t</code> 转换从此窗口打开的水平分屏：现在 <code>hello2</code> 在右侧，而不是 <code>hello1</code> 的下方。再次按 <code>Ctrl-w t</code> 转换回来。</p>
+<p>返回教程分屏并按 <code>Ctrl-w o</code> 关闭所有分屏，除教程外。</p>
+<h2 id="13-7-从文件选择器打开分屏"><a href="#13-7-从文件选择器打开分屏" class="headerlink" title="13.7 从文件选择器打开分屏"></a>13.7 从文件选择器打开分屏</h2><p>也可以直接从文件选择器打开分屏。按 <code>space f</code> 打开文件选择器。从那里，你可以输入文本执行模糊匹配文件查找，并使用上下箭头移动选定的文件（由 <code>&gt;</code> 符号指示）。要退出文件选择器，请按 <code>Escape</code>。</p>
+<p>在文件选择器中选择任意文件。你可以通过按 <code>Enter</code> 在当前视图中打开它（此时不要这样做）。但你也可以在新分屏中打开它。按 <code>Ctrl-v</code> 在新垂直分屏中打开选定的文件。再次按 <code>space f</code>，选择任意文件，然后按 <code>Ctrl-s</code> 在水平分屏中打开它。</p>
+<p>返回教程分屏，按 <code>Ctrl-w o</code> 关闭所有分屏，除教程外。</p>
+<h2 id="第13章总结"><a href="#第13章总结" class="headerlink" title="第13章总结"></a>第13章总结</h2><p>分屏可以用来显示相同的缓冲区多次或多个缓冲区。要访问主要窗口和分屏命令，按 <code>Ctrl-w</code>。你可以使用 <code>Ctrl-w hjkl</code> 在分屏之间移动，按 <code>Ctrl-w q</code> 关闭分屏，按 <code>Ctrl-w o</code> 关闭除当前分屏外的所有分屏。</p>
+<p>分屏也可以通过使用 <code>:vs FILENAME</code> 和 <code>:hs FILENAME</code> 命令打开。</p>
+<p>分屏也可以直接从文件选择器中打开，使用 <code>Ctrl-v</code> 在新垂直分屏中打开选定的文件，使用 <code>Ctrl-s</code> 在水平分屏中打开选定的文件。</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="ic i-tag"></i> 学习笔记</a>
+          <a href="/tags/Helix/" rel="tag"><i class="ic i-tag"></i> Helix</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2025-11-04 08:13:14" itemprop="dateModified" datetime="2025-11-04T08:13:14+08:00">2025-11-04</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="环四亚甲基四硝基胺 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>环四亚甲基四硝基胺 <i class="ic i-at"><em>@</em></i>Notvalid0的个人博客站
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="后现代文本编辑器-Helix学习笔记">http://example.com/2025/11/04/后现代文本编辑器-Helix学习笔记/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2025/11/01/Windows%E7%9A%84%E7%B1%BBHyprland%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" itemprop="url" rel="prev" data-background-image="&#x2F;2025&#x2F;11&#x2F;01&#x2F;Windows%E7%9A%84%E7%B1%BBHyprland%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88&#x2F;cover_.jpg" title="Windows的类Hyprland解决方案">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Windows的类Hyprland解决方案</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%9F%BA%E6%9C%AC%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8"><span class="toc-number">2.</span> <span class="toc-text">1.1 基本光标移动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E9%80%80%E5%87%BA-Helix"><span class="toc-number">3.</span> <span class="toc-text">1.2 退出 Helix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6"><span class="toc-number">4.</span> <span class="toc-text">1.3 删除字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text">1.4 插入模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-%E4%BF%9D%E5%AD%98%E6%96%87%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">1.5 保存文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">第1章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%9B%B4%E5%A4%9A%E6%8F%92%E5%85%A5%E5%91%BD%E4%BB%A4"><span class="toc-number">8.</span> <span class="toc-text">2.1 更多插入命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E6%89%93%E5%BC%80%E6%96%B0%E8%A1%8C"><span class="toc-number">9.</span> <span class="toc-text">2.2 打开新行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">10.</span> <span class="toc-text">第2章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E7%A7%BB%E5%8A%A8%E5%92%8C%E9%80%89%E6%8B%A9"><span class="toc-number">11.</span> <span class="toc-text">3.1 移动和选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%9B%B4%E5%A4%9A%E7%A7%BB%E5%8A%A8"><span class="toc-number">12.</span> <span class="toc-text">3.2 更多移动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E5%8D%95%E8%AF%8D%E5%92%8C%E5%8D%95%E8%AF%8D"><span class="toc-number">13.</span> <span class="toc-text">3.3 单词和单词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E6%9B%B4%E6%94%B9%E5%91%BD%E4%BB%A4"><span class="toc-number">14.</span> <span class="toc-text">3.4 更改命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E4%BD%BF%E7%94%A8%E6%95%B0%E5%AD%97%E9%87%8D%E5%A4%8D%E5%91%BD%E4%BB%A4"><span class="toc-number">15.</span> <span class="toc-text">3.5 使用数字重复命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-%E9%80%89%E6%8B%A9%E6%A8%A1%E5%BC%8F"><span class="toc-number">16.</span> <span class="toc-text">3.6 选择模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7-%E9%80%89%E6%8B%A9%E6%95%B4%E8%A1%8C"><span class="toc-number">17.</span> <span class="toc-text">3.7 选择整行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-8-%E6%94%B6%E7%BC%A9%E9%80%89%E6%8B%A9"><span class="toc-number">18.</span> <span class="toc-text">3.8 收缩选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">19.</span> <span class="toc-text">第3章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E6%92%A4%E9%94%80%E6%93%8D%E4%BD%9C"><span class="toc-number">20.</span> <span class="toc-text">4.1 撤销操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E5%A4%8D%E5%88%B6%E5%92%8C%E7%B2%98%E8%B4%B4%E6%96%87%E6%9C%AC"><span class="toc-number">21.</span> <span class="toc-text">4.2 复制和粘贴文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%AD%E6%90%9C%E7%B4%A2"><span class="toc-number">22.</span> <span class="toc-text">4.3 在文件中搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">23.</span> <span class="toc-text">第4章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-%E5%A4%9A%E5%85%89%E6%A0%87"><span class="toc-number">24.</span> <span class="toc-text">5.1 多光标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E9%80%89%E6%8B%A9%E5%91%BD%E4%BB%A4"><span class="toc-number">25.</span> <span class="toc-text">5.2 选择命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-%E9%80%9A%E8%BF%87%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%80%89%E6%8B%A9"><span class="toc-number">26.</span> <span class="toc-text">5.3 通过正则表达式选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-%E5%AF%B9%E9%BD%90%E9%80%89%E6%8B%A9"><span class="toc-number">27.</span> <span class="toc-text">5.4 对齐选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-%E5%B0%86%E9%80%89%E6%8B%A9%E6%8B%86%E5%88%86%E4%B8%BA%E8%A1%8C"><span class="toc-number">28.</span> <span class="toc-text">5.5 将选择拆分为行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">29.</span> <span class="toc-text">第5章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-%E9%80%89%E6%8B%A9%E5%88%B0%E5%AD%97%E7%AC%A6"><span class="toc-number">30.</span> <span class="toc-text">6.1 选择到字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4"><span class="toc-number">31.</span> <span class="toc-text">6.2 替换命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-%E9%87%8D%E5%A4%8D"><span class="toc-number">32.</span> <span class="toc-text">6.3 重复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC6%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">33.</span> <span class="toc-text">第6章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-%E7%94%A8%E5%89%AA%E5%88%87%E6%96%87%E6%9C%AC%E6%9B%BF%E6%8D%A2"><span class="toc-number">34.</span> <span class="toc-text">7.1 用剪切文本替换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-%E5%90%88%E5%B9%B6%E8%A1%8C"><span class="toc-number">35.</span> <span class="toc-text">7.2 合并行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-%E7%BC%A9%E8%BF%9B%E8%A1%8C"><span class="toc-number">36.</span> <span class="toc-text">7.3 缩进行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-%E5%A2%9E%E5%8A%A0%E5%92%8C%E5%87%8F%E5%B0%91%E6%95%B0%E5%AD%97"><span class="toc-number">37.</span> <span class="toc-text">7.4 增加和减少数字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC7%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">38.</span> <span class="toc-text">第7章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-number">39.</span> <span class="toc-text">8.1 寄存器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-%E5%AE%8F"><span class="toc-number">40.</span> <span class="toc-text">8.2 宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC8%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">41.</span> <span class="toc-text">第8章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-%E6%90%9C%E7%B4%A2%E9%80%89%E6%8B%A9"><span class="toc-number">42.</span> <span class="toc-text">9.1 搜索选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-%E6%B7%BB%E5%8A%A0%E9%80%89%E6%8B%A9%E5%88%B0%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%90%9C%E7%B4%A2%E5%8C%B9%E9%85%8D%E9%A1%B9"><span class="toc-number">43.</span> <span class="toc-text">9.2 添加选择到下一个搜索匹配项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-%E4%BD%BF%E7%94%A8%E8%B7%B3%E8%BD%AC%E5%88%97%E8%A1%A8"><span class="toc-number">44.</span> <span class="toc-text">9.3 使用跳转列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC9%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">45.</span> <span class="toc-text">第9章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-1-%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%A0%E9%99%A4%E9%80%89%E6%8B%A9"><span class="toc-number">46.</span> <span class="toc-text">10.1 循环和删除选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-2-%E5%BE%AA%E7%8E%AF%E9%80%89%E6%8B%A9%E5%86%85%E5%AE%B9"><span class="toc-number">47.</span> <span class="toc-text">10.2 循环选择内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-3-%E6%9B%B4%E6%94%B9%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="toc-number">48.</span> <span class="toc-text">10.3 更改大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-4-%E6%8B%86%E5%88%86%E9%80%89%E6%8B%A9"><span class="toc-number">49.</span> <span class="toc-text">10.4 拆分选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC10%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">50.</span> <span class="toc-text">第10章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-1-%E6%B3%A8%E9%87%8A%E4%B8%80%E8%A1%8C"><span class="toc-number">51.</span> <span class="toc-text">11.1 注释一行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-2-%E6%B3%A8%E9%87%8A%E5%A4%9A%E8%A1%8C"><span class="toc-number">52.</span> <span class="toc-text">11.2 注释多行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC11%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">53.</span> <span class="toc-text">第11章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-1-%E4%BD%BF%E7%94%A8%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F%E8%B7%B3%E8%BD%AC"><span class="toc-number">54.</span> <span class="toc-text">12.1 使用匹配模式跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-2-%E4%BD%BF%E7%94%A8%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F%E9%80%89%E6%8B%A9%E5%86%85%E9%83%A8"><span class="toc-number">55.</span> <span class="toc-text">12.2 使用匹配模式选择内部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-3-%E4%BD%BF%E7%94%A8%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F%E9%80%89%E6%8B%A9%E5%91%A8%E5%9B%B4"><span class="toc-number">56.</span> <span class="toc-text">12.3 使用匹配模式选择周围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-4-%E4%BD%BF%E7%94%A8%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F%E5%8C%85%E5%9B%B4"><span class="toc-number">57.</span> <span class="toc-text">12.4 使用匹配模式包围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-5-%E4%BD%BF%E7%94%A8%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F%E5%88%A0%E9%99%A4%E5%8C%85%E5%9B%B4"><span class="toc-number">58.</span> <span class="toc-text">12.5 使用匹配模式删除包围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-6-%E4%BD%BF%E7%94%A8%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F%E6%9B%BF%E6%8D%A2%E5%8C%85%E5%9B%B4"><span class="toc-number">59.</span> <span class="toc-text">12.6 使用匹配模式替换包围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">60.</span> <span class="toc-text">第12章总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-1-%E5%88%9B%E5%BB%BA%E6%96%B0%E5%88%86%E5%B1%8F"><span class="toc-number">61.</span> <span class="toc-text">13.1 创建新分屏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-2-%E5%9C%A8%E5%88%86%E5%B1%8F%E4%B9%8B%E9%97%B4%E7%A7%BB%E5%8A%A8"><span class="toc-number">62.</span> <span class="toc-text">13.2 在分屏之间移动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-3-%E5%88%86%E5%B1%8F%E5%BD%93%E5%89%8D%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-number">63.</span> <span class="toc-text">13.3 分屏当前缓冲区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-4-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E5%88%86%E5%B1%8F"><span class="toc-number">64.</span> <span class="toc-text">13.4 使用命令分屏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-5-%E4%BA%A4%E6%8D%A2%E5%88%86%E5%B1%8F"><span class="toc-number">65.</span> <span class="toc-text">13.5 交换分屏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-6-%E8%BD%AC%E6%8D%A2%E5%88%86%E5%B1%8F"><span class="toc-number">66.</span> <span class="toc-text">13.6 转换分屏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-7-%E4%BB%8E%E6%96%87%E4%BB%B6%E9%80%89%E6%8B%A9%E5%99%A8%E6%89%93%E5%BC%80%E5%88%86%E5%B1%8F"><span class="toc-number">67.</span> <span class="toc-text">13.7 从文件选择器打开分屏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC13%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="toc-number">68.</span> <span class="toc-text">第13章总结</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="环四亚甲基四硝基胺"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">环四亚甲基四硝基胺</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">2</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">4</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL25vdHZhbGlkMA==" title="https:&#x2F;&#x2F;github.com&#x2F;notvalid0"><i class="ic i-github"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS85NC01My00MC01Mw==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;94-53-40-53"><i class="ic i-zhihu"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/11/01/Windows%E7%9A%84%E7%B1%BBHyprland%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Windows的类Hyprland解决方案">Windows的类Hyprland解决方案</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="后现代文本编辑器-Helix学习笔记">后现代文本编辑器-Helix学习笔记</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-notvalid0"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">环四亚甲基四硝基胺 @ NotValid0's BLOG</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2025/11/04/后现代文本编辑器-Helix学习笔记/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

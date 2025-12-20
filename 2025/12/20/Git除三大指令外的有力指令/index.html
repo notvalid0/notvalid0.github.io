@@ -1,0 +1,493 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Notvalid0的个人博客站" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Notvalid0的个人博客站" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Notvalid0的个人博客站" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="学习笔记,Git" />
+
+
+<link rel="canonical" href="http://example.com/2025/12/20/Git%E9%99%A4%E4%B8%89%E5%A4%A7%E6%8C%87%E4%BB%A4%E5%A4%96%E7%9A%84%E6%9C%89%E5%8A%9B%E6%8C%87%E4%BB%A4/">
+
+
+
+  <title>
+Git除三大指令外的有力指令 |
+NotValid0's BLOG = Notvalid0的个人博客站</title>
+<meta name="generator" content="Hexo 8.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Git除三大指令外的有力指令
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2025-12-20 18:44:11">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2025-12-20T18:44:11+08:00">2025-12-20</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>2.2k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>2 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">NotValid0's BLOG</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="/2025/12/20/Git%E9%99%A4%E4%B8%89%E5%A4%A7%E6%8C%87%E4%BB%A4%E5%A4%96%E7%9A%84%E6%9C%89%E5%8A%9B%E6%8C%87%E4%BB%A4/cover.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/12/20/Git%E9%99%A4%E4%B8%89%E5%A4%A7%E6%8C%87%E4%BB%A4%E5%A4%96%E7%9A%84%E6%9C%89%E5%8A%9B%E6%8C%87%E4%BB%A4/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="环四亚甲基四硝基胺">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Notvalid0的个人博客站">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="〇、引言"><a href="#〇、引言" class="headerlink" title="〇、引言"></a>〇、引言</h2><blockquote>
+<p>    这篇博客介绍关于Git除git add&#x2F; git push&#x2F; git commit(以及git pull与git clone)以外的有效工具，其一是笔者用于记录学习，其二是避免此博客被荒废掉。</p>
+</blockquote>
+<p>    在进行协同开发亦或使用仓库储存代码时，均少不了使用Git，但是笔者在正式使用后却发现，日常似乎一直在不停<code>git add .</code>,<code>git commit -m</code>,<code>git push original main</code>并且近乎安于此，于是近日重新对其他的指令进行了学习，试图以此增进工作效率。</p>
+<hr>
+<h2 id="一、时间回溯⌚"><a href="#一、时间回溯⌚" class="headerlink" title="一、时间回溯⌚"></a>一、时间回溯⌚</h2><h3 id="1-1-不小心提交了不得了的commit？git-reset一键回撤"><a href="#1-1-不小心提交了不得了的commit？git-reset一键回撤" class="headerlink" title="1.1 不小心提交了不得了的commit？git reset一键回撤"></a>1.1 不小心提交了不得了的commit？git reset一键回撤</h3><p>     <code>git reset</code> 是 Git 中用于<strong>移动 HEAD 指针</strong>、<strong>重置暂存区（index）</strong> 和&#x2F;或 <strong>工作目录</strong> 的命令，常用于撤销提交、取消暂存文件或丢弃本地更改。它的行为取决于所使用的选项（<code>--soft</code>、<code>--mixed(default)</code>、<code>--hard</code>）以及指定的提交（commit）</p>
+<p>标准写法如下：</p>
+<pre><code>git reset [command] &lt;commit&gt;
+</code></pre>
+<p>    三个选项对应着三种不同的强度，其中<code>soft</code>为撤回上一次提交，但是保留修改在暂存区；<code>mixed</code>保留修改，但是清空暂存区，也是<code>reset</code>指令的默认模式；<code>hard</code>指令将代码和提交都恢复到上一次提交时的状态，彻底丢弃。示例如下：</p>
+<pre><code>git reset --soft HEAD~1    //HEAD~1表示上一个提交，~2表示上两个，以此类推
+git reset                  //mixed模式，保存修改，修改不在暂存区，HEAD不变
+git reset --hard HEAD~2    //与代码一起回到两次提交前
+</code></pre>
+<blockquote>
+<p>需要注意，reset可回溯的有限，一般建议不要HEAD~后面太大</p>
+</blockquote>
+<p>    当然，<code>reset</code>指令也可以不更改HEAD指针<strong>直接针对暂存区的文件</strong>，常用如下代码：</p>
+<pre><code>git reset -- &lt;filename&gt;    //取消暂存一个文件，但不更改HEAD
+</code></pre>
+<blockquote>
+<p><code>git reset</code>如果想用于共享分支需要强制推送，建议使用<code>revert</code></p>
+</blockquote>
+<h3 id="1-2-带着现代的记忆回到过去？-revert一键生成“反向commit”"><a href="#1-2-带着现代的记忆回到过去？-revert一键生成“反向commit”" class="headerlink" title="1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”"></a>1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”</h3><p>    这个指令与git reset有相似之处，但是<code>git revert</code>的使用场景与<code>git reset</code>完全不同，<code>git revert</code>是用于安全撤销某次提交的指令，不删除历史，而是创造一个相反的commit用于抵消之前的commit，基本写法如下：</p>
+<pre><code>git revert &lt;commit&gt;
+</code></pre>
+<p>    其中比较常见的用法有以下两个</p>
+<ul>
+<li><code>-n</code> 或 <code>--no-commit</code>：只应用反向更改到工作区&#x2F;暂存区，<strong>不自动提交</strong>（适合组合多次 revert 后统一提交）</li>
+<li><code>--edit</code> &#x2F; <code>-e</code>：强制编辑提交信息（默认会自动生成如 “Revert ‘xxx’”）</li>
+</ul>
+<p>    commit可以使用HEAD指针或者commit hash，举例如：</p>
+<pre><code>git revert HEAD            //创建一个新提交与HEAD完全相反
+git revert n0tv4l1d0       //Git计算HASH并生成反向补丁
+git revert -n n0tv4l1d0    //应用于工作区但是不commit
+</code></pre>
+<h3 id="1-3-COMMIT打错字好丢人？amend提供“后悔药”"><a href="#1-3-COMMIT打错字好丢人？amend提供“后悔药”" class="headerlink" title="1.3 COMMIT打错字好丢人？amend提供“后悔药”"></a>1.3 COMMIT打错字好丢人？amend提供“后悔药”</h3><p>    好不容易写完代码提交，push之前却发现不小心漏交文件或者发现打错字？不想再重新写一个垃圾提交污染纯净的信息？<code>git commit</code> 提供了这样一个指令：</p>
+<pre><code>git commit --amend &lt;command&gt;
+</code></pre>
+<p>    举例而言，不妨假设我们现在写了<code>commit.c</code>提交</p>
+<pre><code>git add commit.c                //提交commit.c
+git commit -m &quot;Update Commot&quot;   //不好，没交commit.h还打错了，好羞耻
+git add commit.h                //提交commit.h
+git commit -m &quot;Update Commit&quot;   //这样就好了
+</code></pre>
+<blockquote>
+<p>需要注意，<code>git reset</code>与<code>git commit --amend</code><strong>仅限于push之前</strong>的补救，push了还是自求多福罢…</p>
+</blockquote>
+<hr>
+<h2 id="三、建立支部🌲"><a href="#三、建立支部🌲" class="headerlink" title="三、建立支部🌲"></a>三、建立支部🌲</h2><h3 id="2-1-main裸奔施展不开？开分支放心搞事！"><a href="#2-1-main裸奔施展不开？开分支放心搞事！" class="headerlink" title="2.1 main裸奔施展不开？开分支放心搞事！"></a>2.1 main裸奔施展不开？开分支放心搞事！</h3><p>    很多时候写东西总有后顾之忧，担心写坏了还没有备份，每次都时间回溯又嫌弃浪费时间，<code>git checkout</code>解决了这个问题。<code>git checkout</code>的基本指令如下：</p>
+<pre><code>git checkout [command] &lt;branch-name&gt;
+</code></pre>
+<p>    比较常用的便是拉取新的分支与切换分支，分别对应：</p>
+<pre><code>git checkout -b &lt;new-branch-name&gt;    //在当前分支拉取一个新的分支
+git checkout feature/n0tv4l1d0       //切换到feature/n0tv4l1d0这个分支
+</code></pre>
+<p>    这里<code>checkout -b</code>可替代为下列指令</p>
+<pre><code>git branch &lt;new-branch-name&gt;
+git checkout &lt;new-branch-name&gt;
+</code></pre>
+<blockquote>
+<p>在Git23新推出了<code>git switch</code>指令，关于二者不同参考<span class="exturl" data-url="aHR0cHM6Ly9kZWVwaW5vdXQuY29tL2dpdC9naXQtcXVlc3Rpb25zLzM2MF9naXRfd2hhdHNfdGhlX2RpZmZlcmVuY2VfYmV0d2Vlbl9naXRfc3dpdGNoX2FuZF9naXRfY2hlY2tvdXRfYnJhbmNoLmh0bWw=">此篇博客</span></p>
+</blockquote>
+<h3 id="2-2-我还没改完怎么让我拉别的分支？-Stash暂存未提交修改"><a href="#2-2-我还没改完怎么让我拉别的分支？-Stash暂存未提交修改" class="headerlink" title="2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改"></a>2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改</h3><p>    <code>git stash</code>的语法很简单，基本上只有两个</p>
+<pre><code>git stash            //暂存未提交的修改
+git stash pop        //取回未提交的修改
+</code></pre>
+<p>    这个十分简单，使用场景也很纯粹：双分支忙不过来不想提交半成品commmit，此指令暂时不作过多讲解。</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="ic i-tag"></i> 学习笔记</a>
+          <a href="/tags/Git/" rel="tag"><i class="ic i-tag"></i> Git</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2025-12-20 20:25:44" itemprop="dateModified" datetime="2025-12-20T20:25:44+08:00">2025-12-20</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="环四亚甲基四硝基胺 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>环四亚甲基四硝基胺 <i class="ic i-at"><em>@</em></i>Notvalid0的个人博客站
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2025/12/20/Git%E9%99%A4%E4%B8%89%E5%A4%A7%E6%8C%87%E4%BB%A4%E5%A4%96%E7%9A%84%E6%9C%89%E5%8A%9B%E6%8C%87%E4%BB%A4/" title="Git除三大指令外的有力指令">http://example.com/2025/12/20/Git除三大指令外的有力指令/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="prev" data-background-image="&#x2F;2025&#x2F;11&#x2F;04&#x2F;%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;cover_1.jpg" title="后现代文本编辑器-Helix学习笔记">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>后现代文本编辑器-Helix学习笔记</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%87%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">〇、引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%97%B6%E9%97%B4%E5%9B%9E%E6%BA%AF%E2%8C%9A"><span class="toc-number">2.</span> <span class="toc-text">一、时间回溯⌚</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%B8%8D%E5%B0%8F%E5%BF%83%E6%8F%90%E4%BA%A4%E4%BA%86%E4%B8%8D%E5%BE%97%E4%BA%86%E7%9A%84commit%EF%BC%9Fgit-reset%E4%B8%80%E9%94%AE%E5%9B%9E%E6%92%A4"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 不小心提交了不得了的commit？git reset一键回撤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%B8%A6%E7%9D%80%E7%8E%B0%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BF%86%E5%9B%9E%E5%88%B0%E8%BF%87%E5%8E%BB%EF%BC%9F-revert%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E2%80%9C%E5%8F%8D%E5%90%91commit%E2%80%9D"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-COMMIT%E6%89%93%E9%94%99%E5%AD%97%E5%A5%BD%E4%B8%A2%E4%BA%BA%EF%BC%9Famend%E6%8F%90%E4%BE%9B%E2%80%9C%E5%90%8E%E6%82%94%E8%8D%AF%E2%80%9D"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 COMMIT打错字好丢人？amend提供“后悔药”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BB%BA%E7%AB%8B%E6%94%AF%E9%83%A8%F0%9F%8C%B2"><span class="toc-number">3.</span> <span class="toc-text">三、建立支部🌲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-main%E8%A3%B8%E5%A5%94%E6%96%BD%E5%B1%95%E4%B8%8D%E5%BC%80%EF%BC%9F%E5%BC%80%E5%88%86%E6%94%AF%E6%94%BE%E5%BF%83%E6%90%9E%E4%BA%8B%EF%BC%81"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 main裸奔施展不开？开分支放心搞事！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%88%91%E8%BF%98%E6%B2%A1%E6%94%B9%E5%AE%8C%E6%80%8E%E4%B9%88%E8%AE%A9%E6%88%91%E6%8B%89%E5%88%AB%E7%9A%84%E5%88%86%E6%94%AF%EF%BC%9F-Stash%E6%9A%82%E5%AD%98%E6%9C%AA%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="环四亚甲基四硝基胺"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">环四亚甲基四硝基胺</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">3</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">5</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL25vdHZhbGlkMA==" title="https:&#x2F;&#x2F;github.com&#x2F;notvalid0"><i class="ic i-github"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS85NC01My00MC01Mw==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;94-53-40-53"><i class="ic i-zhihu"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="后现代文本编辑器-Helix学习笔记">后现代文本编辑器-Helix学习笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/12/20/Git%E9%99%A4%E4%B8%89%E5%A4%A7%E6%8C%87%E4%BB%A4%E5%A4%96%E7%9A%84%E6%9C%89%E5%8A%9B%E6%8C%87%E4%BB%A4/" title="Git除三大指令外的有力指令">Git除三大指令外的有力指令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/11/01/Windows%E7%9A%84%E7%B1%BBHyprland%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Windows的类Hyprland解决方案">Windows的类Hyprland解决方案</a></span>
+  </li>
+
+  </ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-notvalid0"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">环四亚甲基四硝基胺 @ NotValid0's BLOG</span>
+  </div>
+
+  <div class="footer-beian">
+    <a href="https://icp.gov.moe/?keyword=20251158" target="_blank">萌ICP备20251158号</a>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="Symbols count total">18k words</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="Reading time total">16 mins.</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2025/12/20/Git除三大指令外的有力指令/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,audio: ["https://music.163.com/song?id=1428695599"],fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

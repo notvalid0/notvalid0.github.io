@@ -76,7 +76,7 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>2.2k</span>
+    <span>3.2k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -84,7 +84,7 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>2 mins.</span>
+    <span>3 mins.</span>
   </span>
 </div>
 
@@ -166,67 +166,93 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
 <hr>
 <h2 id="一、时间回溯⌚"><a href="#一、时间回溯⌚" class="headerlink" title="一、时间回溯⌚"></a>一、时间回溯⌚</h2><h3 id="1-1-不小心提交了不得了的commit？git-reset一键回撤"><a href="#1-1-不小心提交了不得了的commit？git-reset一键回撤" class="headerlink" title="1.1 不小心提交了不得了的commit？git reset一键回撤"></a>1.1 不小心提交了不得了的commit？git reset一键回撤</h3><p>     <code>git reset</code> 是 Git 中用于<strong>移动 HEAD 指针</strong>、<strong>重置暂存区（index）</strong> 和&#x2F;或 <strong>工作目录</strong> 的命令，常用于撤销提交、取消暂存文件或丢弃本地更改。它的行为取决于所使用的选项（<code>--soft</code>、<code>--mixed(default)</code>、<code>--hard</code>）以及指定的提交（commit）</p>
 <p>标准写法如下：</p>
-<pre><code>git reset [command] &lt;commit&gt;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset [command] &lt;commit&gt;</span><br></pre></td></tr></table></figure>
+
 <p>    三个选项对应着三种不同的强度，其中<code>soft</code>为撤回上一次提交，但是保留修改在暂存区；<code>mixed</code>保留修改，但是清空暂存区，也是<code>reset</code>指令的默认模式；<code>hard</code>指令将代码和提交都恢复到上一次提交时的状态，彻底丢弃。示例如下：</p>
-<pre><code>git reset --soft HEAD~1    //HEAD~1表示上一个提交，~2表示上两个，以此类推
-git reset                  //mixed模式，保存修改，修改不在暂存区，HEAD不变
-git reset --hard HEAD~2    //与代码一起回到两次提交前
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD~1    //HEAD~1表示上一个提交，~2表示上两个，以此类推</span><br><span class="line">git reset                  //mixed模式，保存修改，修改不在暂存区，HEAD不变</span><br><span class="line">git reset --hard HEAD~2    //与代码一起回到两次提交前</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>需要注意，reset可回溯的有限，一般建议不要HEAD~后面太大</p>
 </blockquote>
 <p>    当然，<code>reset</code>指令也可以不更改HEAD指针<strong>直接针对暂存区的文件</strong>，常用如下代码：</p>
-<pre><code>git reset -- &lt;filename&gt;    //取消暂存一个文件，但不更改HEAD
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset -- &lt;filename&gt;    //取消暂存一个文件，但不更改HEAD</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p><code>git reset</code>如果想用于共享分支需要强制推送，建议使用<code>revert</code></p>
 </blockquote>
+<blockquote>
+<p>注意⚠️：<strong><code>reset</code>虽好，也不要贪多哦</strong></p>
+</blockquote>
 <h3 id="1-2-带着现代的记忆回到过去？-revert一键生成“反向commit”"><a href="#1-2-带着现代的记忆回到过去？-revert一键生成“反向commit”" class="headerlink" title="1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”"></a>1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”</h3><p>    这个指令与git reset有相似之处，但是<code>git revert</code>的使用场景与<code>git reset</code>完全不同，<code>git revert</code>是用于安全撤销某次提交的指令，不删除历史，而是创造一个相反的commit用于抵消之前的commit，基本写法如下：</p>
-<pre><code>git revert &lt;commit&gt;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git revert &lt;commit&gt;</span><br></pre></td></tr></table></figure>
+
 <p>    其中比较常见的用法有以下两个</p>
 <ul>
 <li><code>-n</code> 或 <code>--no-commit</code>：只应用反向更改到工作区&#x2F;暂存区，<strong>不自动提交</strong>（适合组合多次 revert 后统一提交）</li>
 <li><code>--edit</code> &#x2F; <code>-e</code>：强制编辑提交信息（默认会自动生成如 “Revert ‘xxx’”）</li>
 </ul>
 <p>    commit可以使用HEAD指针或者commit hash，举例如：</p>
-<pre><code>git revert HEAD            //创建一个新提交与HEAD完全相反
-git revert n0tv4l1d0       //Git计算HASH并生成反向补丁
-git revert -n n0tv4l1d0    //应用于工作区但是不commit
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git revert HEAD            //创建一个新提交与HEAD完全相反</span><br><span class="line">git revert n0tv4l1d0       //Git计算HASH并生成反向补丁</span><br><span class="line">git revert -n n0tv4l1d0    //应用于工作区但是不commit</span><br></pre></td></tr></table></figure>
+
 <h3 id="1-3-COMMIT打错字好丢人？amend提供“后悔药”"><a href="#1-3-COMMIT打错字好丢人？amend提供“后悔药”" class="headerlink" title="1.3 COMMIT打错字好丢人？amend提供“后悔药”"></a>1.3 COMMIT打错字好丢人？amend提供“后悔药”</h3><p>    好不容易写完代码提交，push之前却发现不小心漏交文件或者发现打错字？不想再重新写一个垃圾提交污染纯净的信息？<code>git commit</code> 提供了这样一个指令：</p>
-<pre><code>git commit --amend &lt;command&gt;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend &lt;command&gt;</span><br></pre></td></tr></table></figure>
+
 <p>    举例而言，不妨假设我们现在写了<code>commit.c</code>提交</p>
-<pre><code>git add commit.c                //提交commit.c
-git commit -m &quot;Update Commot&quot;   //不好，没交commit.h还打错了，好羞耻
-git add commit.h                //提交commit.h
-git commit -m &quot;Update Commit&quot;   //这样就好了
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add commit.c                //提交commit.c</span><br><span class="line">git commit -m &quot;Update Commot&quot;   //不好，没交commit.h还打错了，好羞耻</span><br><span class="line">git add commit.h                //提交commit.h</span><br><span class="line">git commit -m &quot;Update Commit&quot;   //这样就好了</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>需要注意，<code>git reset</code>与<code>git commit --amend</code><strong>仅限于push之前</strong>的补救，push了还是自求多福罢…</p>
 </blockquote>
+<h3 id="1-3-reset的好帮手：reflog输出变更历史"><a href="#1-3-reset的好帮手：reflog输出变更历史" class="headerlink" title="1.3 reset的好帮手：reflog输出变更历史"></a>1.3 reset的好帮手：reflog输出变更历史</h3><p>        <code>git reset</code>指令打错了，<code>soft HEAD~1</code>一下成为了<code>hard HEAD~10</code>？<code>rebase</code>失败，似乎自己的时间突然被挖空了一块。不用着急，git 也提供了<code>git reflog</code>指令用来查看历史编辑：只需要</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+
+<p>    输出实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n0tv4lid0 HEAD@&#123;0&#125;: reset: moving to HEAD~2    //hash + HEAD + command</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>    之后只需要找到对应操作的<code>hash</code>，之后使用<code>git reset --hard &lt;commit-hash&gt;</code>即可轻松恢复。</p>
 <hr>
-<h2 id="三、建立支部🌲"><a href="#三、建立支部🌲" class="headerlink" title="三、建立支部🌲"></a>三、建立支部🌲</h2><h3 id="2-1-main裸奔施展不开？开分支放心搞事！"><a href="#2-1-main裸奔施展不开？开分支放心搞事！" class="headerlink" title="2.1 main裸奔施展不开？开分支放心搞事！"></a>2.1 main裸奔施展不开？开分支放心搞事！</h3><p>    很多时候写东西总有后顾之忧，担心写坏了还没有备份，每次都时间回溯又嫌弃浪费时间，<code>git checkout</code>解决了这个问题。<code>git checkout</code>的基本指令如下：</p>
-<pre><code>git checkout [command] &lt;branch-name&gt;
-</code></pre>
+<h2 id="二、建立支部🌲"><a href="#二、建立支部🌲" class="headerlink" title="二、建立支部🌲"></a>二、建立支部🌲</h2><h3 id="2-1-main裸奔施展不开？开分支放心搞事！"><a href="#2-1-main裸奔施展不开？开分支放心搞事！" class="headerlink" title="2.1 main裸奔施展不开？开分支放心搞事！"></a>2.1 main裸奔施展不开？开分支放心搞事！</h3><p>    很多时候写东西总有后顾之忧，担心写坏了还没有备份，每次都时间回溯又嫌弃浪费时间，<code>git checkout</code>解决了这个问题。<code>git checkout</code>的基本指令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout [command] &lt;branch-name&gt;</span><br></pre></td></tr></table></figure>
+
 <p>    比较常用的便是拉取新的分支与切换分支，分别对应：</p>
-<pre><code>git checkout -b &lt;new-branch-name&gt;    //在当前分支拉取一个新的分支
-git checkout feature/n0tv4l1d0       //切换到feature/n0tv4l1d0这个分支
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;new-branch-name&gt;    //在当前分支拉取一个新的分支</span><br><span class="line">git checkout feature/n0tv4l1d0       //切换到feature/n0tv4l1d0这个分支</span><br></pre></td></tr></table></figure>
+
 <p>    这里<code>checkout -b</code>可替代为下列指令</p>
-<pre><code>git branch &lt;new-branch-name&gt;
-git checkout &lt;new-branch-name&gt;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;new-branch-name&gt;          //可替换为branch指令</span><br><span class="line">git checkout &lt;new-branch-name&gt;        //直接写也可以</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>在Git23新推出了<code>git switch</code>指令，关于二者不同参考<span class="exturl" data-url="aHR0cHM6Ly9kZWVwaW5vdXQuY29tL2dpdC9naXQtcXVlc3Rpb25zLzM2MF9naXRfd2hhdHNfdGhlX2RpZmZlcmVuY2VfYmV0d2Vlbl9naXRfc3dpdGNoX2FuZF9naXRfY2hlY2tvdXRfYnJhbmNoLmh0bWw=">此篇博客</span></p>
 </blockquote>
 <h3 id="2-2-我还没改完怎么让我拉别的分支？-Stash暂存未提交修改"><a href="#2-2-我还没改完怎么让我拉别的分支？-Stash暂存未提交修改" class="headerlink" title="2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改"></a>2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改</h3><p>    <code>git stash</code>的语法很简单，基本上只有两个</p>
-<pre><code>git stash            //暂存未提交的修改
-git stash pop        //取回未提交的修改
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git stash            //暂存未提交的修改</span><br><span class="line">git stash pop        //取回未提交的修改</span><br></pre></td></tr></table></figure>
+
+
+
 <p>    这个十分简单，使用场景也很纯粹：双分支忙不过来不想提交半成品commmit，此指令暂时不作过多讲解。</p>
+<hr>
+<h2 id="三、合成大分支🍉"><a href="#三、合成大分支🍉" class="headerlink" title="三、合成大分支🍉"></a>三、合成大分支🍉</h2><h3 id="3-1-分支总算写完了…然后呢？"><a href="#3-1-分支总算写完了…然后呢？" class="headerlink" title="3.1 分支总算写完了…然后呢？"></a>3.1 分支总算写完了…然后呢？</h3><p>    <code>git merge</code>这个指令十分常见，不应作过多解释，但是为了彰显与后续<code>git rebase</code>的区别，还是应当稍加完善。<code>git merge</code>的使用方式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout n0tv4l1d0        //切换分支</span><br><span class="line">git merge main                //将当前分支合并在main中</span><br></pre></td></tr></table></figure>
+
+<p>    也可以在main分支反向合并，效果相同：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout main             //切换到主分支</span><br><span class="line">git merge n0tv4l1d0           //合并分支</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-唔唔啊…分支多了历史好混乱"><a href="#3-2-唔唔啊…分支多了历史好混乱" class="headerlink" title="3.2 唔唔啊…分支多了历史好混乱"></a>3.2 唔唔啊…分支多了历史好混乱</h3><p>    <code>git rebase</code>指令对个人开发十分友好，与merge的基本使用方式完全相同，但是<code>rebase</code>指令会重写生成线性历史结构，具体流程与基本指令如下：</p>
+<ul>
+<li>找到 <code>feature</code> 相对于 <code>main</code> 的新提交。</li>
+<li><strong>临时移除这些提交</strong>，将 <code>feature</code> 分支“移到” <code>main</code> 的最新提交之后。</li>
+<li><strong>重新逐个应用</strong>（replay）那些提交。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase &lt;branch-name&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>需要注意⚠️: <strong>对已经推送到远程的公共分支执行<code>rebase</code>会破坏他人历史</strong>，切忌在公共场所随地<code>rebase</code>。</p>
+</blockquote>
+<h3 id="3-3-不想要整个分支？cherry-pick选定特定提交"><a href="#3-3-不想要整个分支？cherry-pick选定特定提交" class="headerlink" title="3.3 不想要整个分支？cherry-pick选定特定提交"></a>3.3 不想要整个分支？cherry-pick选定特定提交</h3><p>    <code>git cherry-pick</code>提供了一种新的指令，允许用户不整合整条分支而是提取某(几)个特定提交，具体指令如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-pick &lt;commit-hash&gt;         //后面可以包含多个hash</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用<code>&lt;hash_old&gt;..&lt;hash_new&gt;</code>时不包括<code>&lt;hash_old&gt;</code>对应版本，如欲包括需要使用<code>&lt;hash_old&gt;^..&lt;hash_new&gt;</code></p>
+</blockquote>
 
       <div class="tags">
           <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="ic i-tag"></i> 学习笔记</a>
@@ -242,7 +268,7 @@ git stash pop        //取回未提交的修改
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2025-12-20 20:25:44" itemprop="dateModified" datetime="2025-12-20T20:25:44+08:00">2025-12-20</time>
+    <time title="Modified: 2025-12-21 16:37:46" itemprop="dateModified" datetime="2025-12-21T16:37:46+08:00">2025-12-21</time>
   </span>
 </div>
 
@@ -311,7 +337,7 @@ git stash pop        //取回未提交的修改
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%87%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">〇、引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%97%B6%E9%97%B4%E5%9B%9E%E6%BA%AF%E2%8C%9A"><span class="toc-number">2.</span> <span class="toc-text">一、时间回溯⌚</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%B8%8D%E5%B0%8F%E5%BF%83%E6%8F%90%E4%BA%A4%E4%BA%86%E4%B8%8D%E5%BE%97%E4%BA%86%E7%9A%84commit%EF%BC%9Fgit-reset%E4%B8%80%E9%94%AE%E5%9B%9E%E6%92%A4"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 不小心提交了不得了的commit？git reset一键回撤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%B8%A6%E7%9D%80%E7%8E%B0%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BF%86%E5%9B%9E%E5%88%B0%E8%BF%87%E5%8E%BB%EF%BC%9F-revert%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E2%80%9C%E5%8F%8D%E5%90%91commit%E2%80%9D"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-COMMIT%E6%89%93%E9%94%99%E5%AD%97%E5%A5%BD%E4%B8%A2%E4%BA%BA%EF%BC%9Famend%E6%8F%90%E4%BE%9B%E2%80%9C%E5%90%8E%E6%82%94%E8%8D%AF%E2%80%9D"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 COMMIT打错字好丢人？amend提供“后悔药”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BB%BA%E7%AB%8B%E6%94%AF%E9%83%A8%F0%9F%8C%B2"><span class="toc-number">3.</span> <span class="toc-text">三、建立支部🌲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-main%E8%A3%B8%E5%A5%94%E6%96%BD%E5%B1%95%E4%B8%8D%E5%BC%80%EF%BC%9F%E5%BC%80%E5%88%86%E6%94%AF%E6%94%BE%E5%BF%83%E6%90%9E%E4%BA%8B%EF%BC%81"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 main裸奔施展不开？开分支放心搞事！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%88%91%E8%BF%98%E6%B2%A1%E6%94%B9%E5%AE%8C%E6%80%8E%E4%B9%88%E8%AE%A9%E6%88%91%E6%8B%89%E5%88%AB%E7%9A%84%E5%88%86%E6%94%AF%EF%BC%9F-Stash%E6%9A%82%E5%AD%98%E6%9C%AA%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%87%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">〇、引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%97%B6%E9%97%B4%E5%9B%9E%E6%BA%AF%E2%8C%9A"><span class="toc-number">2.</span> <span class="toc-text">一、时间回溯⌚</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%B8%8D%E5%B0%8F%E5%BF%83%E6%8F%90%E4%BA%A4%E4%BA%86%E4%B8%8D%E5%BE%97%E4%BA%86%E7%9A%84commit%EF%BC%9Fgit-reset%E4%B8%80%E9%94%AE%E5%9B%9E%E6%92%A4"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 不小心提交了不得了的commit？git reset一键回撤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%B8%A6%E7%9D%80%E7%8E%B0%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BF%86%E5%9B%9E%E5%88%B0%E8%BF%87%E5%8E%BB%EF%BC%9F-revert%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E2%80%9C%E5%8F%8D%E5%90%91commit%E2%80%9D"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-COMMIT%E6%89%93%E9%94%99%E5%AD%97%E5%A5%BD%E4%B8%A2%E4%BA%BA%EF%BC%9Famend%E6%8F%90%E4%BE%9B%E2%80%9C%E5%90%8E%E6%82%94%E8%8D%AF%E2%80%9D"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 COMMIT打错字好丢人？amend提供“后悔药”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-reset%E7%9A%84%E5%A5%BD%E5%B8%AE%E6%89%8B%EF%BC%9Areflog%E8%BE%93%E5%87%BA%E5%8F%98%E6%9B%B4%E5%8E%86%E5%8F%B2"><span class="toc-number">2.4.</span> <span class="toc-text">1.3 reset的好帮手：reflog输出变更历史</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BB%BA%E7%AB%8B%E6%94%AF%E9%83%A8%F0%9F%8C%B2"><span class="toc-number">3.</span> <span class="toc-text">二、建立支部🌲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-main%E8%A3%B8%E5%A5%94%E6%96%BD%E5%B1%95%E4%B8%8D%E5%BC%80%EF%BC%9F%E5%BC%80%E5%88%86%E6%94%AF%E6%94%BE%E5%BF%83%E6%90%9E%E4%BA%8B%EF%BC%81"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 main裸奔施展不开？开分支放心搞事！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%88%91%E8%BF%98%E6%B2%A1%E6%94%B9%E5%AE%8C%E6%80%8E%E4%B9%88%E8%AE%A9%E6%88%91%E6%8B%89%E5%88%AB%E7%9A%84%E5%88%86%E6%94%AF%EF%BC%9F-Stash%E6%9A%82%E5%AD%98%E6%9C%AA%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%90%88%E6%88%90%E5%A4%A7%E5%88%86%E6%94%AF%F0%9F%8D%89"><span class="toc-number">4.</span> <span class="toc-text">三、合成大分支🍉</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%88%86%E6%94%AF%E6%80%BB%E7%AE%97%E5%86%99%E5%AE%8C%E4%BA%86%E2%80%A6%E7%84%B6%E5%90%8E%E5%91%A2%EF%BC%9F"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 分支总算写完了…然后呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%94%94%E5%94%94%E5%95%8A%E2%80%A6%E5%88%86%E6%94%AF%E5%A4%9A%E4%BA%86%E5%8E%86%E5%8F%B2%E5%A5%BD%E6%B7%B7%E4%B9%B1"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 唔唔啊…分支多了历史好混乱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E4%B8%8D%E6%83%B3%E8%A6%81%E6%95%B4%E4%B8%AA%E5%88%86%E6%94%AF%EF%BC%9Fcherry-pick%E9%80%89%E5%AE%9A%E7%89%B9%E5%AE%9A%E6%8F%90%E4%BA%A4"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 不想要整个分支？cherry-pick选定特定提交</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -396,7 +422,7 @@ git stash pop        //取回未提交的修改
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/11/01/Windows%E7%9A%84%E7%B1%BBHyprland%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Windows的类Hyprland解决方案">Windows的类Hyprland解决方案</a></span>
+    <span><a href="/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="后现代文本编辑器-Helix学习笔记">后现代文本编辑器-Helix学习笔记</a></span>
   </li>
 
       
@@ -405,7 +431,7 @@ git stash pop        //取回未提交的修改
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/11/04/%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-Helix%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="后现代文本编辑器-Helix学习笔记">后现代文本编辑器-Helix学习笔记</a></span>
+    <span><a href="/2025/11/01/Windows%E7%9A%84%E7%B1%BBHyprland%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Windows的类Hyprland解决方案">Windows的类Hyprland解决方案</a></span>
   </li>
 
       
@@ -439,13 +465,13 @@ git stash pop        //取回未提交的修改
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">18k words</span>
+    <span title="Symbols count total">19k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">16 mins.</span>
+    <span title="Reading time total">17 mins.</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

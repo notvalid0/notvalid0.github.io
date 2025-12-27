@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="学习笔记,Git" />
+  <meta name="keywords" content="学习笔记,Git,原创" />
 
 
 <link rel="canonical" href="http://example.com/2025/12/20/Git%E9%99%A4%E4%B8%89%E5%A4%A7%E6%8C%87%E4%BB%A4%E5%A4%96%E7%9A%84%E6%9C%89%E5%8A%9B%E6%8C%87%E4%BB%A4/">
@@ -76,7 +76,7 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>3.2k</span>
+    <span>3.9k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -84,7 +84,7 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>3 mins.</span>
+    <span>4 mins.</span>
   </span>
 </div>
 
@@ -226,8 +226,6 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
 <h3 id="2-2-我还没改完怎么让我拉别的分支？-Stash暂存未提交修改"><a href="#2-2-我还没改完怎么让我拉别的分支？-Stash暂存未提交修改" class="headerlink" title="2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改"></a>2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改</h3><p>    <code>git stash</code>的语法很简单，基本上只有两个</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git stash            //暂存未提交的修改</span><br><span class="line">git stash pop        //取回未提交的修改</span><br></pre></td></tr></table></figure>
 
-
-
 <p>    这个十分简单，使用场景也很纯粹：双分支忙不过来不想提交半成品commmit，此指令暂时不作过多讲解。</p>
 <hr>
 <h2 id="三、合成大分支🍉"><a href="#三、合成大分支🍉" class="headerlink" title="三、合成大分支🍉"></a>三、合成大分支🍉</h2><h3 id="3-1-分支总算写完了…然后呢？"><a href="#3-1-分支总算写完了…然后呢？" class="headerlink" title="3.1 分支总算写完了…然后呢？"></a>3.1 分支总算写完了…然后呢？</h3><p>    <code>git merge</code>这个指令十分常见，不应作过多解释，但是为了彰显与后续<code>git rebase</code>的区别，还是应当稍加完善。<code>git merge</code>的使用方式如下：</p>
@@ -253,10 +251,34 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
 <blockquote>
 <p>使用<code>&lt;hash_old&gt;..&lt;hash_new&gt;</code>时不包括<code>&lt;hash_old&gt;</code>对应版本，如欲包括需要使用<code>&lt;hash_old&gt;^..&lt;hash_new&gt;</code></p>
 </blockquote>
+<hr>
+<h2 id="四、不做背锅侠🦸‍♀️"><a href="#四、不做背锅侠🦸‍♀️" class="headerlink" title="四、不做背锅侠🦸‍♀️"></a>四、不做背锅侠🦸‍♀️</h2><h3 id="4-1-谁动了我的代码？blame一键找出"><a href="#4-1-谁动了我的代码？blame一键找出" class="headerlink" title="4.1 谁动了我的代码？blame一键找出"></a>4.1 谁动了我的代码？blame一键找出</h3><p>    <code>git blame</code>的这个名字十分奇怪，虽然无从得知<code>Linus</code>是在何种情形下写出这个指令的，但是这个代码的使用情景十分契合它的名字。<code>git blame</code>主要为找出代码每一行的修改详情，基本指令十分简单，只需要：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git blame n0tvalid0.c</span><br></pre></td></tr></table></figure>
+
+<p>    返回的详情包括每一行修改者，修改时间与对应commit；可以找到代码的家长和创造代码的原因(从commit)</p>
+<h3 id="4-2-我都干了什么？Diff一键获取修改"><a href="#4-2-我都干了什么？Diff一键获取修改" class="headerlink" title="4.2 我都干了什么？Diff一键获取修改"></a>4.2 我都干了什么？Diff一键获取修改</h3><p>    <code>git diff</code>是一个十分实用的指令，用于在<code>commit</code>之前确认自己到底都更新了什么。具体指令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git diff                                         //用于暂存区或上次提交与工作区的diff</span><br><span class="line">git diff &lt;branch-name-1&gt; &lt;branch-name-2&gt;         //用于比较分支区别</span><br></pre></td></tr></table></figure>
+
+<p>    <code>git diff</code>尤其应当作为团队开发的常客，知道自己有无不小心的改动也是为他人成果的负责。</p>
+<h3 id="4-3-查看Log太丑了？美化的Log用不用？"><a href="#4-3-查看Log太丑了？美化的Log用不用？" class="headerlink" title="4.3 查看Log太丑了？美化的Log用不用？"></a>4.3 查看Log太丑了？美化的Log用不用？</h3><p>    <code>git log</code>指令作为一个常见指令，因其不易读而令人生畏，原版指令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+
+<p>    但是其实可以通过加上其他功能使得其更易读</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline --graph --decorate --all</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>oneline</code>：提交一行一个，避免拥挤</p>
+<p><code>graph</code>：带树形图</p>
+<p><code>decorate</code>：显示分支&#x2F;tag</p>
+<p><code>all</code>：显示全部分支</p>
+</blockquote>
+<p>    如果不用Linux而用Windows自带的<code>git bash</code>，无法自动补全上次输入的指令导致费时费力，可以选择<code>.gitconfig</code>添加别名(假如以后输入<code>git lg</code>)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[alias]</span><br><span class="line">    lg = log --oneline --graph --decorate --all</span><br></pre></td></tr></table></figure>
 
       <div class="tags">
           <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="ic i-tag"></i> 学习笔记</a>
           <a href="/tags/Git/" rel="tag"><i class="ic i-tag"></i> Git</a>
+          <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
       </div>
   </div>
 
@@ -268,7 +290,7 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2025-12-21 16:37:46" itemprop="dateModified" datetime="2025-12-21T16:37:46+08:00">2025-12-21</time>
+    <time title="Modified: 2025-12-27 11:33:28" itemprop="dateModified" datetime="2025-12-27T11:33:28+08:00">2025-12-27</time>
   </span>
 </div>
 
@@ -337,7 +359,7 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%87%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">〇、引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%97%B6%E9%97%B4%E5%9B%9E%E6%BA%AF%E2%8C%9A"><span class="toc-number">2.</span> <span class="toc-text">一、时间回溯⌚</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%B8%8D%E5%B0%8F%E5%BF%83%E6%8F%90%E4%BA%A4%E4%BA%86%E4%B8%8D%E5%BE%97%E4%BA%86%E7%9A%84commit%EF%BC%9Fgit-reset%E4%B8%80%E9%94%AE%E5%9B%9E%E6%92%A4"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 不小心提交了不得了的commit？git reset一键回撤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%B8%A6%E7%9D%80%E7%8E%B0%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BF%86%E5%9B%9E%E5%88%B0%E8%BF%87%E5%8E%BB%EF%BC%9F-revert%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E2%80%9C%E5%8F%8D%E5%90%91commit%E2%80%9D"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-COMMIT%E6%89%93%E9%94%99%E5%AD%97%E5%A5%BD%E4%B8%A2%E4%BA%BA%EF%BC%9Famend%E6%8F%90%E4%BE%9B%E2%80%9C%E5%90%8E%E6%82%94%E8%8D%AF%E2%80%9D"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 COMMIT打错字好丢人？amend提供“后悔药”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-reset%E7%9A%84%E5%A5%BD%E5%B8%AE%E6%89%8B%EF%BC%9Areflog%E8%BE%93%E5%87%BA%E5%8F%98%E6%9B%B4%E5%8E%86%E5%8F%B2"><span class="toc-number">2.4.</span> <span class="toc-text">1.3 reset的好帮手：reflog输出变更历史</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BB%BA%E7%AB%8B%E6%94%AF%E9%83%A8%F0%9F%8C%B2"><span class="toc-number">3.</span> <span class="toc-text">二、建立支部🌲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-main%E8%A3%B8%E5%A5%94%E6%96%BD%E5%B1%95%E4%B8%8D%E5%BC%80%EF%BC%9F%E5%BC%80%E5%88%86%E6%94%AF%E6%94%BE%E5%BF%83%E6%90%9E%E4%BA%8B%EF%BC%81"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 main裸奔施展不开？开分支放心搞事！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%88%91%E8%BF%98%E6%B2%A1%E6%94%B9%E5%AE%8C%E6%80%8E%E4%B9%88%E8%AE%A9%E6%88%91%E6%8B%89%E5%88%AB%E7%9A%84%E5%88%86%E6%94%AF%EF%BC%9F-Stash%E6%9A%82%E5%AD%98%E6%9C%AA%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%90%88%E6%88%90%E5%A4%A7%E5%88%86%E6%94%AF%F0%9F%8D%89"><span class="toc-number">4.</span> <span class="toc-text">三、合成大分支🍉</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%88%86%E6%94%AF%E6%80%BB%E7%AE%97%E5%86%99%E5%AE%8C%E4%BA%86%E2%80%A6%E7%84%B6%E5%90%8E%E5%91%A2%EF%BC%9F"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 分支总算写完了…然后呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%94%94%E5%94%94%E5%95%8A%E2%80%A6%E5%88%86%E6%94%AF%E5%A4%9A%E4%BA%86%E5%8E%86%E5%8F%B2%E5%A5%BD%E6%B7%B7%E4%B9%B1"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 唔唔啊…分支多了历史好混乱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E4%B8%8D%E6%83%B3%E8%A6%81%E6%95%B4%E4%B8%AA%E5%88%86%E6%94%AF%EF%BC%9Fcherry-pick%E9%80%89%E5%AE%9A%E7%89%B9%E5%AE%9A%E6%8F%90%E4%BA%A4"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 不想要整个分支？cherry-pick选定特定提交</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%87%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">〇、引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%97%B6%E9%97%B4%E5%9B%9E%E6%BA%AF%E2%8C%9A"><span class="toc-number">2.</span> <span class="toc-text">一、时间回溯⌚</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%B8%8D%E5%B0%8F%E5%BF%83%E6%8F%90%E4%BA%A4%E4%BA%86%E4%B8%8D%E5%BE%97%E4%BA%86%E7%9A%84commit%EF%BC%9Fgit-reset%E4%B8%80%E9%94%AE%E5%9B%9E%E6%92%A4"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 不小心提交了不得了的commit？git reset一键回撤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%B8%A6%E7%9D%80%E7%8E%B0%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BF%86%E5%9B%9E%E5%88%B0%E8%BF%87%E5%8E%BB%EF%BC%9F-revert%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E2%80%9C%E5%8F%8D%E5%90%91commit%E2%80%9D"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 带着现代的记忆回到过去？ revert一键生成“反向commit”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-COMMIT%E6%89%93%E9%94%99%E5%AD%97%E5%A5%BD%E4%B8%A2%E4%BA%BA%EF%BC%9Famend%E6%8F%90%E4%BE%9B%E2%80%9C%E5%90%8E%E6%82%94%E8%8D%AF%E2%80%9D"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 COMMIT打错字好丢人？amend提供“后悔药”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-reset%E7%9A%84%E5%A5%BD%E5%B8%AE%E6%89%8B%EF%BC%9Areflog%E8%BE%93%E5%87%BA%E5%8F%98%E6%9B%B4%E5%8E%86%E5%8F%B2"><span class="toc-number">2.4.</span> <span class="toc-text">1.3 reset的好帮手：reflog输出变更历史</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BB%BA%E7%AB%8B%E6%94%AF%E9%83%A8%F0%9F%8C%B2"><span class="toc-number">3.</span> <span class="toc-text">二、建立支部🌲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-main%E8%A3%B8%E5%A5%94%E6%96%BD%E5%B1%95%E4%B8%8D%E5%BC%80%EF%BC%9F%E5%BC%80%E5%88%86%E6%94%AF%E6%94%BE%E5%BF%83%E6%90%9E%E4%BA%8B%EF%BC%81"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 main裸奔施展不开？开分支放心搞事！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%88%91%E8%BF%98%E6%B2%A1%E6%94%B9%E5%AE%8C%E6%80%8E%E4%B9%88%E8%AE%A9%E6%88%91%E6%8B%89%E5%88%AB%E7%9A%84%E5%88%86%E6%94%AF%EF%BC%9F-Stash%E6%9A%82%E5%AD%98%E6%9C%AA%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 我还没改完怎么让我拉别的分支？ Stash暂存未提交修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%90%88%E6%88%90%E5%A4%A7%E5%88%86%E6%94%AF%F0%9F%8D%89"><span class="toc-number">4.</span> <span class="toc-text">三、合成大分支🍉</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%88%86%E6%94%AF%E6%80%BB%E7%AE%97%E5%86%99%E5%AE%8C%E4%BA%86%E2%80%A6%E7%84%B6%E5%90%8E%E5%91%A2%EF%BC%9F"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 分支总算写完了…然后呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%94%94%E5%94%94%E5%95%8A%E2%80%A6%E5%88%86%E6%94%AF%E5%A4%9A%E4%BA%86%E5%8E%86%E5%8F%B2%E5%A5%BD%E6%B7%B7%E4%B9%B1"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 唔唔啊…分支多了历史好混乱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E4%B8%8D%E6%83%B3%E8%A6%81%E6%95%B4%E4%B8%AA%E5%88%86%E6%94%AF%EF%BC%9Fcherry-pick%E9%80%89%E5%AE%9A%E7%89%B9%E5%AE%9A%E6%8F%90%E4%BA%A4"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 不想要整个分支？cherry-pick选定特定提交</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%B8%8D%E5%81%9A%E8%83%8C%E9%94%85%E4%BE%A0%F0%9F%A6%B8%E2%80%8D%E2%99%80%EF%B8%8F"><span class="toc-number">5.</span> <span class="toc-text">四、不做背锅侠🦸‍♀️</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E8%B0%81%E5%8A%A8%E4%BA%86%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%9Fblame%E4%B8%80%E9%94%AE%E6%89%BE%E5%87%BA"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 谁动了我的代码？blame一键找出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%88%91%E9%83%BD%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9FDiff%E4%B8%80%E9%94%AE%E8%8E%B7%E5%8F%96%E4%BF%AE%E6%94%B9"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 我都干了什么？Diff一键获取修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%9F%A5%E7%9C%8BLog%E5%A4%AA%E4%B8%91%E4%BA%86%EF%BC%9F%E7%BE%8E%E5%8C%96%E7%9A%84Log%E7%94%A8%E4%B8%8D%E7%94%A8%EF%BC%9F"><span class="toc-number">5.3.</span> <span class="toc-text">4.3 查看Log太丑了？美化的Log用不用？</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -358,7 +380,7 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">5</span>
+        <span class="count">6</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -465,13 +487,13 @@ NotValid0's BLOG = Notvalid0的个人博客站</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">19k words</span>
+    <span title="Symbols count total">20k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">17 mins.</span>
+    <span title="Reading time total">18 mins.</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

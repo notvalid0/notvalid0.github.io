@@ -3913,7 +3913,7 @@ main >.inner {
   color: var(--header-text-color);
   overflow: hidden;
   transform: rotateY(0deg);
-  background-image: ;
+  background-image: /source/images/banner.jpg;
 }
 .cards .item .cover .title {
   margin: 0rem;
